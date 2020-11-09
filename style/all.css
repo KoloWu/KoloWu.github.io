@@ -52,40 +52,48 @@ table {
 }
 
 /*------------------------------------------*/
+
 .contatiner {
     width: 100%;
+    min-width: 1920px;
+    display: block;
 }
 .contatiner>div {
-    width: 50%;
+    width: 1200px;
     margin: 0 auto;
     display: block;
 }
-.contatiner .name {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #000000;
+.contatiner>div:first-child {
+    border-bottom: 2px solid #000000;
 }
 .contatiner .name h1{
-    font-size: 40px;
-    font-weight: 700;
+    font: normal normal normal 80px/94px Roboto;
+    font-size: 80px;
+    padding-top: 47px;
+    padding-bottom: 17px;
 }
-.contatiner .photo {
-    padding-top: 15px;
-    padding-bottom: 15px;
+.contatiner span.photo {
+    display: block;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    width: 324px;
+    height: 324px;
+    background: transparent url('../img/photo-1536180931879-fd2d652efddc.png') 0% 0% no-repeat padding-box;
 }
-.contatiner .photo img {
-    width: 20%;
-    height: 20%;
-}
+
 .item .title {
-    padding-bottom: 5px;
-    border-bottom: 2px solid #cccccc;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #000000;
 }
 .item .title>span {
     display: inline-block;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 32px;
+    font-family: 'Noto Sans', sans-serif;
+    margin-right: 16px;
 }
-.title span:nth-child(2) {
-    color: #ff0000;
+.item .title>span:nth-child(2) {
+    font-size: 24px;
+    color:#A00404;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
 }
