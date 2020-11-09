@@ -75,10 +75,17 @@ table {
 .contatiner span.photo {
     display: block;
     margin-top: 48px;
-    margin-bottom: 48px;
     width: 324px;
     height: 324px;
     background: transparent url('../img/photo-1536180931879-fd2d652efddc.png') 0% 0% no-repeat padding-box;
+}
+
+.item {
+    padding-top: 48px;
+}
+
+.item span {
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .item .title {
@@ -88,7 +95,6 @@ table {
 .item .title>span {
     display: inline-block;
     font-size: 32px;
-    font-family: 'Noto Sans', sans-serif;
     margin-right: 16px;
 }
 .item .title>span:nth-child(2) {
@@ -96,4 +102,39 @@ table {
     color:#A00404;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
+}
+
+.item .contain span {
+    display: block;
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+.item.skills {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    width: 1920px;
+    background: #415165 0% 0% no-repeat padding-box;
+    color: #ffffff;
+}
+.item.skills .title {
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+}
+.item.skills>div {
+    width: 1200px;
+    margin: 0 auto;
+}
+.item.skills .contain .contain_r {
+    margin-top: 40px;
+    margin-left: 40%;
+    border-left: 2px solid #96A9C4;
+}
+.item.skills .contain .contain_r>span {
+    padding-bottom: unset;
+    padding-top: unset;
+    padding-left: 5%;
+    font: normal normal 300 24px/36px Roboto;
 }
