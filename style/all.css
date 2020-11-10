@@ -147,6 +147,9 @@ table {
 .item.workExp .contain>span:nth-child(1){
     padding-top: 0px;
 }
+.item.workExp .contain>span:nth-child(3){
+    width: 65%;
+}
 .item.workExp .contain span.img{
     display: block;
     width: 90px;
