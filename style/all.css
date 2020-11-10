@@ -84,7 +84,7 @@ table {
     padding-top: 48px;
 }
 
-.item span {
+.item span,.footer span {
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -92,12 +92,12 @@ table {
     padding-bottom: 8px;
     border-bottom: 1px solid #000000;
 }
-.item .title>span {
+.item .title>span,.footer .title>span {
     display: inline-block;
     font-size: 32px;
     margin-right: 16px;
 }
-.item .title>span:nth-child(2) {
+.item .title>span:nth-child(2){
     font-size: 24px;
     color:#A00404;
     font-weight: 500;
@@ -119,11 +119,11 @@ table {
     background: #415165 0% 0% no-repeat padding-box;
     color: #ffffff;
 }
-.item.skills .title {
+.item.skills .title,.footer .title {
     text-align: center;
     border-bottom: 1px solid #ffffff;
 }
-.item.skills>div {
+.item.skills>div,.footer>div {
     width: 1200px;
     margin: 0 auto;
 }
@@ -138,6 +138,43 @@ table {
     padding-left: 5%;
     font: normal normal 300 24px/36px Roboto;
 }
-.footer {
-    
+.item.workExp .contain{
+    margin-top: 16px;
+    margin-left: 24px;
+    padding-left: 24px;
+    border-left: 2px solid #96A9C4;
+}
+.item.workExp .contain>span:nth-child(1){
+    padding-top: 0px;
+}
+.item.workExp .contain span.img{
+    display: block;
+    width: 90px;
+    height: 90px;
+}
+span.img.img_hexschoolLogo{
+    background: url('../img/Group 7.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+span.img.img_simtreeLogo{
+    background: url('../img/Group 8.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.footer .title{
+    padding-bottom: 5px;
+}
+.footer .contain {
+    text-align: center;
+    padding-top: 32px;
+}
+.footer .contain>span{
+    font-size: 24px;
+    display: block;
+    padding-bottom: 16px;
+}
+.footer .contain>span img {
+    display: inline-block;
+    margin-right: 24px;
 }
