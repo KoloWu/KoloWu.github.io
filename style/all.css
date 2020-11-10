@@ -112,7 +112,7 @@ table {
     padding-top: 16px;
 }
 
-.item.skills {
+.item.skills,.footer {
     padding-top: 36px;
     padding-bottom: 36px;
     width: 1920px;
@@ -137,4 +137,7 @@ table {
     padding-top: unset;
     padding-left: 5%;
     font: normal normal 300 24px/36px Roboto;
+}
+.footer {
+    
 }
