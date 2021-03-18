@@ -1675,8 +1675,9 @@ form#voucherManageForm div.toolbar table#requestTable tbody td i {
 }
 form#voucherManageForm nav.nav ul {
   list-style: none;
+  position: unset;
 }
-form#voucherManageForm nav.nav ul li.page-item a {
+form#voucherManageForm nav.nav ul li a {
   height: 1.5rem;
   min-width: 3.5rem;
   padding: unset;
