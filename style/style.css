@@ -26,15 +26,7 @@ html nav.navbar {
 .dashedborder {
   border: dashed;
 }
-.talignCenter {
-  text-align: center;
-}
-.talignRight {
-  text-align: right;
-}
-.talignLeft {
-  text-align: left;
-}
+
 /* 標題列 */
 .toolbar {
   padding-bottom: 5px;
@@ -1689,7 +1681,9 @@ div.phpLogOpPage nav.nav ul {
   position: unset;
 }
 form#voucherManageForm nav.nav ul li a,
-div.phpLogOpPage nav.nav ul li a {
+div.phpLogOpPage nav.nav ul li a,
+form#ip-black-list nav.nav ul li a,
+div#pageArea nav.nav ul li a {
   height: 1.5rem;
   min-width: 3.5rem;
   padding: unset;
@@ -1699,7 +1693,9 @@ div.phpLogOpPage nav.nav ul li a {
   border-color: #bd2130;
 }
 form#voucherManageForm nav.nav ul li.page-item.active a,
-div.phpLogOpPage nav.nav ul li a.text-white {
+div.phpLogOpPage nav.nav ul li a.text-white,
+form#ip-black-list nav.nav ul li.page-item.active a,
+div#pageArea nav.nav ul li.page-item.active a {
   background: #c82333 !important;
   color: #fff;
 }
