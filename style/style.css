@@ -130,14 +130,20 @@ form#baseRateForm div.toolbar button[type="button"],
 form#betBackupForm div.toolbar button[type="button"],
 form#globalSettingForm div.toolbar button[type="button"],
 main.changePasswordMain form table tbody tr td input[type="submit"],
-main.userPermissionMain>div.col-sm-3>button.btn {
+main.userPermissionMain>div.col-sm-3>button.btn,
+div.ipBlackMain div.toolbar button[type="submit"],
+form#ip-black-list table thead button[type="submit"],
+form#ip-autoblock-list table thead button[type="submit"] {
   padding: 0 1rem;
   font-size: .875rem;
 }
 div.querybar div.input-group div.input-group-prepend span.input-group-text,
 div.querybar div.input-group select.custom-select,
 div.querybar div.input-group div.input-group-append button[type="button"],
-main.userPermissionMain>div.col-sm-3>button.btn {
+main.userPermissionMain>div.col-sm-3>button.btn,
+div.ipBlackMain div.toolbar button[type="submit"],
+form#ip-black-list table thead button[type="submit"],
+form#ip-autoblock-list table thead button[type="submit"] {
   height: calc(1.5em + .5rem + 2px);
 }
 table.table thead th button[type="button"] {
@@ -354,7 +360,7 @@ table#onlineBetTop tbody>tr>th:nth-child(2) {
   width: 1%;
 }
 #recent .contentL .stopTd {
-  width: 30px !important;
+  width: 35px !important;
 }
 #recent .contentL .itemForm {
   width: 20%;
@@ -1145,7 +1151,8 @@ th {
 /*全域設定*/
 div#golbalSettingTabContent,
 div.ipBlackTb div.tab-content,
-div.newsAddContent.tab-content {
+div.newsAddContent.tab-content,
+div.ipBlackMain div.tab-content {
   margin-top: -5px !important;
   margin-bottom: 10px;
   padding: 20px;
@@ -1173,6 +1180,9 @@ form#globalSettingForm div.tab-pane div.bootstrap-tagsinput {
 }
 form#systemSettingForm input[type="date"] {
   width: unset !important;
+}
+div.typeOfTransactionTb label {
+  margin-bottom: unset;
 }
 
 /*遊戲管理*/
@@ -1673,11 +1683,13 @@ form#voucherManageForm div.toolbar table#requestTable tbody td i {
   top: 8px;
   right: 10px;
 }
-form#voucherManageForm nav.nav ul {
+form#voucherManageForm nav.nav ul,
+div.phpLogOpPage nav.nav ul {
   list-style: none;
   position: unset;
 }
-form#voucherManageForm nav.nav ul li a {
+form#voucherManageForm nav.nav ul li a,
+div.phpLogOpPage nav.nav ul li a {
   height: 1.5rem;
   min-width: 3.5rem;
   padding: unset;
@@ -1686,7 +1698,22 @@ form#voucherManageForm nav.nav ul li a {
   color: #c82333;
   border-color: #bd2130;
 }
-form#voucherManageForm nav.nav ul li.page-item.active a {
+form#voucherManageForm nav.nav ul li.page-item.active a,
+div.phpLogOpPage nav.nav ul li a.text-white {
   background: #c82333 !important;
   color: #fff;
+}
+div.ipBlackMain form#ip-add table tbody tr td label,
+div.ipBlackMain form#ip-autoblock-config table tbody tr td label {
+  margin-bottom: unset;
+  display: inline-flex;
+}
+div.ipBlackMain form#ip-add table tbody tr td label span,
+div.ipBlackMain form#ip-autoblock-config table tbody tr td label span,
+div.ipBlackMain form#ip-autoblock-config table tbody tr td label i {
+  display: flex;
+  align-items: center;
+}
+div.ipBlackMain form#ip-autoblock-config table tbody tr td label span {
+  width: 175px;
 }
