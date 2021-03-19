@@ -1697,7 +1697,7 @@ div#pageArea nav.nav ul li a {
 form#voucherManageForm nav.nav ul li.page-item.active a,
 div.phpLogOpPage nav.nav ul li a.text-white,
 form#ip-black-list nav.nav ul li.page-item.active a,
-div#pageArea nav.nav ul li.page-item.active a {
+div#pageArea nav.nav ul li a.text-white {
   background: #c82333 !important;
   color: #fff;
 }
