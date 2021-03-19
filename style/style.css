@@ -1676,7 +1676,9 @@ form#voucherManageForm div.toolbar table#requestTable tbody td i {
   right: 10px;
 }
 form#voucherManageForm nav.nav ul,
-div.phpLogOpPage nav.nav ul {
+div.phpLogOpPage nav.nav ul,
+form#ip-black-list nav.nav ul,
+div#pageArea nav.nav ul {
   list-style: none;
   position: unset;
 }
