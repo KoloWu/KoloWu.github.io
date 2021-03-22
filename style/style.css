@@ -1641,7 +1641,22 @@ table.agentTb>tbody>tr a.btn span {
 .mbMinus4 {
   margin-bottom: -4px !important;
 }
-
+table.agentTb>thead>tr>th.creditLeftTh {
+  width: 255px;
+}
+table.agentTb>thead>tr>th.creditLeftTh>div {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+table.agentTb>thead>tr>th.creditLeftTh>div>span:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+table.agentTb>thead>tr>th.creditLeftTh>div>span:nth-child(2)>label {
+  margin-bottom: unset;
+}
 
 /* (#35403)不層層級、使用不同色 */
 /* 0:公司,1:WhiteLabel,2:Agent,3:會員 */
@@ -1674,6 +1689,10 @@ form#voucherManageForm div.toolbar table#requestTable tbody td i {
   position: absolute;
   top: 8px;
   right: 10px;
+}
+div#pageArea {
+  width: 100%;
+  margin-right: 15px;
 }
 form#voucherManageForm nav.nav ul,
 div.phpLogOpPage nav.nav ul,
