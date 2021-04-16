@@ -292,7 +292,8 @@ div.phpLogOpPage nav.nav ul,
 form#ip-black-list nav.nav ul,
 div#pageArea nav.nav ul,
 div#recent nav.nav ul,
-div#rateRecordDialog nav ul {
+div#rateRecordDialog nav ul,
+div#betListDialog nav ul {
   list-style: none;
   position: unset;
 }
@@ -301,7 +302,8 @@ div.phpLogOpPage nav.nav ul li a,
 form#ip-black-list nav.nav ul li a,
 div#pageArea nav.nav ul li a,
 div#recent nav.nav ul a,
-div#rateRecordDialog nav ul a {
+div#rateRecordDialog nav ul a,
+div#betListDialog nav ul a {
   height: 1.5rem;
   min-width: 3.5rem;
   padding: unset;
@@ -315,14 +317,17 @@ div.phpLogOpPage nav.nav ul li a.text-white,
 form#ip-black-list nav.nav ul li.page-item.active a,
 div#pageArea nav.nav ul li a.text-white,
 div#recent nav.nav ul li.active a,
-div#rateRecordDialog nav ul li.active a {
+div#rateRecordDialog nav ul li.active a,
+div#betListDialog nav ul li.active a {
   background: #c82333 !important;
   color: #fff;
 }
-div#rateRecordDialog nav {
+div#rateRecordDialog nav,
+div#betListDialog nav {
   height: 25px;
 }
-div#rateRecordDialog .pagination {
+div#rateRecordDialog .pagination,
+div#betListDialog .pagination {
   margin-bottom: 0;
   margin-top: 5px;
 }
@@ -1192,7 +1197,6 @@ div#navigationArea>div.webRefer:hover {
   display: flex;
   width: 100%;
   justify-content: flex-end;
-  padding-right: 17px;
 }
 
 /*遊戲規則*/
