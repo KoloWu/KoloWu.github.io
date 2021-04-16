@@ -251,21 +251,21 @@ div#rateRecordDialog .pagination>li:last-child>span {
 }
 #recent .contentL #kindTabContent .pagination>li>a,
 #recent .contentL #kindTabContent .pagination>li>span,
-div#rateRecordDialog .paginatio>li>a,
-div#rateRecordDialog .paginatio>li>span {
+div#rateRecordDialog .pagination>li>a,
+div#rateRecordDialog .pagination>li>span {
   padding: 1px 12px;
 }
 #recent .contentL #kindTabContent .pagination .jumpPage,
-div#rateRecordDialog .paginatio .jumpPage {
+div#rateRecordDialog .pagination .jumpPage {
   display: inline-block;
   margin-left: 5px;
 }
 #recent .contentL #kindTabContent .pagination>li>a,
-div#rateRecordDialog .paginatio>li>a {
+div#rateRecordDialog .pagination>li>a {
   border-right: 0;
 }
 #recent .contentL #kindTabContent .pagination>li:last-child>a,
-div#rateRecordDialog .paginatio>li:last-child>a {
+div#rateRecordDialog .pagination>li:last-child>a {
   border-right: 1px solid #bd2130;
 }
 div#pageArea {
