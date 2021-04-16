@@ -7,12 +7,19 @@ html,
 html nav.navbar {
   min-width: 1280px;
 }
+i {
+  margin-right: 5px;
+}
+.label-small {
+  vertical-align: super;
+  font-size: small;
+}
 /* Tools */
+.w300 {
+  width: 300px;
+}
 .w160 {
   width: 160px;
-}
-.w140 {
-  width: 140px;
 }
 .w120 {
   width: 120px;
@@ -23,10 +30,33 @@ html nav.navbar {
 .w80 {
   width: 80px;
 }
-.dashedborder {
-  border: dashed;
+.w55 {
+  width: 55px;
 }
-
+.display-inline-flex {
+  display: inline-flex;
+  vertical-align: top;
+}
+.width100 {
+  text-align: center;
+  width: 100%;
+}
+.width50 {
+  text-align: center;
+  width: 50%;
+}
+.width25 {
+  text-align: center;
+  width: 25%;
+}
+.width33 {
+  text-align: center;
+  width: calc(100% / 3);
+}
+.width20 {
+  text-align: center;
+  width: 25%;
+}
 /* 標題列 */
 .toolbar {
   padding-bottom: 5px;
@@ -34,130 +64,22 @@ html nav.navbar {
   border-bottom: 2px solid #ccc;
   overflow: hidden;
   line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .toolbar .title {
-  float: left;
   line-height: 30px;
   font-weight: bold;
   font-size: 15px;
   color: #333;
 }
-/* Tabs */
-.nav-tabs {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-bottom: 5px;
-  list-style-type: none;
-  padding: 0px;
-  margin-top: 10px;
-  border-bottom: unset;
-}
-.nav-tabs li {
-  margin-right: 2px;
-}
-.nav-tabs li a,
-.nav-tabs li span.nav-link,
-table.papersTb button[type="button"] {
-  display: block;
-  min-width: 65px;
-  background: #f2f2f2;
-  text-align: center;
-  color: #555;
-  line-height: 1.5;
-  border-radius: 2px;
-  border: 1px solid transparent;
-  border-top-left-radius: .25rem;
-  border-top-right-radius: .25rem;
-}
-table.papersTb button[type="button"]:hover {
-  border: 1px solid #510000;
-}
-table.papersTb button[type="button"]:focus {
-  background: #a90000;
-  border: 1px solid #510000;
-  color: #fff;
-}
-.nav-tabs li.active a,
-.nav-tabs li.active span.nav-link {
-  color: #495057;
-  background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
-}
-.nav-link {
-  cursor: pointer;
-}
-.nav-tabs .nav-link:focus,
-.nav-tabs .nav-link:hover {
-  border-color: #dee2e6 #dee2e6 transparent;
-}
-/* 共用樣式設定 - 按鈕、表單輸入框、表格 */
-input[type="date"],
-input[type="text"],
-input[type="password"],
-select,
-select.form-control,
-button[type="button"],
-div.input-group div.input-group-append button[type="button"],
-div.input-group div.input-group-append span.input-group-text,
-div.input-group select.custom-select,
-form#gameSettingForm div.toolbar button[type="button"],
-form#autoRateForm div.toolbar button[type="button"],
-form#backLimitForm div.toolbar button[type="button"],
-form#baseRateForm div.toolbar button[type="button"],
-form#betBackupForm div.toolbar button[type="button"],
-form#globalSettingForm div.toolbar button[type="button"],
-main.changePasswordMain form table tbody tr td input[type="submit"] {
-  height: 2rem;
-}
-input[type="password"] {
-  width: 15rem;
-}
-button[type="button"],
-div.input-group div.input-group-append button[type="button"],
-form#gameSettingForm div.toolbar button[type="button"],
-form#autoRateForm div.toolbar button[type="button"],
-form#backLimitForm div.toolbar button[type="button"],
-form#baseRateForm div.toolbar button[type="button"],
-form#betBackupForm div.toolbar button[type="button"],
-form#globalSettingForm div.toolbar button[type="button"],
-main.changePasswordMain form table tbody tr td input[type="submit"],
-main.userPermissionMain>div.col-sm-3>button.btn,
-div.ipBlackMain div.toolbar button[type="submit"],
-form#ip-black-list table thead button[type="submit"],
-form#ip-autoblock-list table thead button[type="submit"] {
-  padding: 0 1rem;
-  font-size: .875rem;
-}
-div.querybar div.input-group div.input-group-prepend span.input-group-text,
-div.querybar div.input-group select.custom-select,
-div.querybar div.input-group div.input-group-append button[type="button"],
-main.userPermissionMain>div.col-sm-3>button.btn,
-div.ipBlackMain div.toolbar button[type="submit"],
-form#ip-black-list table thead button[type="submit"],
-form#ip-autoblock-list table thead button[type="submit"] {
-  height: calc(1.5em + .5rem + 2px);
-}
-table.table thead th button[type="button"] {
-  height: unset;
-}
-table.table tbody td div.btn-group a.btn {
-  height: 2rem;
-}
-nav.pagebar a.btn {
-  height: 1.5rem;
-  min-width: 3.5rem;
-  padding: unset;
-  line-height: 1.4;
-}
-input[type="date"],
-button[type="button"],
-div.input-group div.input-group-append button[type="button"],
-div.input-group select.custom-select {
-  cursor: pointer;
+.toolbar label {
+  margin-bottom: unset;
 }
 /* Table */
-table.table {
+table.table thead tr {
+  background-color:#fdd8dc;
   font-weight: 700;
 }
 .table-sm td, .table-sm th {
@@ -185,6 +107,9 @@ td.tbBg {
 .betBackUpTb.tbHover thead tr:hover {
   background: rgb(255,237,151);
 }
+table label {
+  margin-bottom: unset;
+}
 /* 線加粗 */
 .tblBigBorderTop {
   border-top: 2px solid #eaa2a2;
@@ -203,1188 +128,180 @@ td.tbBg {
 .unsetbBorder:hover {
   background: unset !important;
 }
-
-
-/* 開獎設置 */
-main.lotteryMain div.toolbar div.form-group select,
-main.lotteryMain div.toolbar div.form-group a.btn,
-main.lotteryMain div.toolbar div.form-group input#cancelopendayID,
-main.lotteryAddMain input[type="submit"],
-main.lotteryAddMain a.btn {
-  height: calc(1.5em + .5rem + 2px);
-  line-height: unset;
-}
-main.lotteryMain div.toolbar div.form-group a#CancelDays.btn {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-main.lotteryMain div.toolbar div.form-group input#cancelopendayID {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-main.lotteryAddMain form table th,
-main.lotteryAddMain form table td {
-  height: 31px;
-  border: 1px solid #eaa2a2;
-  vertical-align: middle
-}
-main.lotteryAddMain form table tbody tr:nth-child(1) th,
-main.lotteryAddMain form table tbody tr th:nth-child(1){
-  background-color:#fdd8dc;
-}
-main.lotteryAddMain form table td input[name="round"],
-main.lotteryAddMain form table td input[name="openday"],
-main.lotteryEditMain form table td input[name="round"],
-main.lotteryEditMain form table td input[name="openday"] {
-  margin: 0 auto;
-  width: 30rem;
-}
-main.lotteryMain table tbody td label {
-  margin-bottom: unset;
-}
-main.lotteryEditMain div.toolbar div.title a.btn.show-cancelstep {
-  height: calc(1.5em + .5rem + 2px);
-  line-height: 1.5;
-}
-main.lotteryEditMain form table tbody th {
-  width: 15%;
-}
-main.lotteryEditMain form table tbody td {
-  text-align: center;
-}
-main.lotteryEditMain input[type="submit"],
-main.lotteryEditMain button[type="button"],
-main.lotteryEditMain a.btn {
-  height: 30px;
-  line-height: unset;
-}
-
-/* 操盤的表格樣式 */
-table#onlineBetTop tbody>tr>th:nth-child(2) {
-  display: inline-flex;
-  min-width: 510px;
-  justify-content: space-between;
-  align-items: center;
-  height: 33px;
-  padding-right: 5px;
-}
-#recent button[type="button"].singleRatePlus,
-#recent button[type="button"].singleRateMinus,
-#recent button[type="button"].kindRatePlus,
-#recent button[type="button"].kindRateMinus,
-#recent button[type="button"].singleRatePlusMulti,
-#recent button[type="button"].singleRateMinusMulti {
-  padding: 0 0.5rem;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-#recent button[type="button"].offestButton,
-#recent button[type="button"].offestSet,
-#recent button[type="button"].offestSave,
-#recent button[type="button"].multiRatePlus,
-#recent button[type="button"].multiRateMinus,
-#recent button[type="button"].multiRatePlusMulti,
-#recent button[type="button"].multiRateMinusMulti,
-#recent button[type="button"].quickChoseButton2,
-#recent button[type="button"].quickChoseButton3,
-#recent button[type="button"].quickChoseButton4,
-#recent button[type="button"].qcv {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 1.8rem;
-  vertical-align: bottom;
-}
-#recent input[type="text"]#quickText,
-#recent input[type="text"].offestInput,
-#recent input[type="text"]#quickRate {
-  display: inline-block;
-  vertical-align: bottom;
-  height: 1.8rem;
-}
-#recent .ulCust input[type="checkbox"]+.labels::before,
-#recent .ulCust input[type="radio"]+.labels::before {
-  content: "";
-  width: 13px;
-  height: 13px;
-  display: inline-block;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-#recent .ulCust input[type="checkbox"]:checked+.labels::before,
-#recent .ulCust input[type="radio"]:checked+.labels::before {
-  content: "✓";
-  text-align: center;
-  line-height: 13px;
-  color:#fff;
-  background: #a90000;
-  border: 1px solid #510000;
-}
-#recent div#quickChose1 label span::before,
-#recent div#quickChose2 label span::before,
-#recent div#quickChose3 label span::before,
-#recent div#quickChose4 label span::before {
-  margin-right: 1px;
-  padding: 8px;
-  border: 1px solid;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-#recent .fastBtnDiv .offestDiv {
-  width: 630px;
-}
-#recent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-#recent .contentL {
-  width: 76%;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 0.3%;
-}
-#recent .contentL .w1 {
-  width: 1%;
-}
-#recent .contentL .stopTd {
-  width: 35px !important;
-}
-#recent .contentL .itemForm {
-  width: 20%;
-}
-#recent .contentL .itemForm.streak {
-  width: 3%;
-}
-#recent .contentL .moneyForm {
-  width: 10%;
-}
-#recent .contentL table tbody tr:hover {
-  background: transparent;
-}
-#recent .contentL #kindTabContent button.kindRatePlus,
-#recent .contentL #kindTabContent button.singleRatePlus,
-#recent .contentL #kindTabContent button.singleRatePlusMulti,
-#recent .contentL #kindTabContent button.kindRatePlus,
-#recent .contentL #kindTabContent button.plusbtn,
-#recent .contentL #kindTabContent button.kindRateMinus,
-#recent .contentL #kindTabContent button.singleRateMinus,
-#recent .contentL #kindTabContent button.singleRateMinusMulti,
-#recent .contentL #kindTabContent button.kindRateMinus,
-#recent .contentL #kindTabContent button.minusbtn {
-  cursor: pointer;
-  color: #fff;
-  background-color: #c82333;
-  border-color: #bd2130;
-  font-weight: 900;
-  width: 15px;
-  height: 15px;
-  border-radius: 3px;
-  line-height:1.35;
-}
-#recent .contentL #kindTabContent button.kindRateMinus,
-#recent .contentL #kindTabContent button.singleRateMinus,
-#recent .contentL #kindTabContent button.singleRateMinusMulti,
-#recent .contentL #kindTabContent button.kindRateMinus,
-#recent .contentL #kindTabContent button.minusbtn {
-  background-color: #0069d9;
-  border-color: #0062cc;
-}
-#recent>table thead tr,
-div.border>table.table thead tr,
-div.row table.table thead tr {
-  background-color:#fdd8dc;
-  text-align: center;
-}
-#recent .contentL #kindTabContent .pagination {
-  position: absolute;
-  bottom: 6px;
-  right: 0px;
-}
-#recent .contentL #kindTabContent .pagination li.active a {
-  color: #fff;
-}
-#recent .contentL #kindTabContent .pagination li.disabled {
-  display: none;
-}
-#recent .contentL #kindTabContent .pagination li {
-  display: inline-block;
-}
-
-#recent .contentL #kindTabContent .pagination li a {
-  font-size: 11px;
-}
-#recent .contentL #kindTabContent .pagination>li:first-child>a,
-#recent .contentL #kindTabContent .pagination>li:first-child>span {
-  margin-left: 0;
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
-}
-#recent .contentL #kindTabContent .pagination>li:last-child>a,
-#recent .contentL #kindTabContent .pagination>li:last-child>span {
-  border-radius: 0px 4px 4px 0px;
-}
-#recent .contentL #kindTabContent .pagination>li>a,
-#recent .contentL #kindTabContent .pagination>li>span {
-  padding: 3px 12px;
-  border: 1px solid #DDD;
-}
-#recent .contentL #kindTabContent .pagination .jumpPage {
-  display: inline-block;
-  margin-left: 5px;
-}
-
-/* 奧克蘭賽車-番攤、奧克蘭五分彩-番攤 */
-#recent .contentL #kindTabContent div[id="tab96"] th.w1,
-#recent .contentL #kindTabContent div[id="tab108"] th.w1 {
-  width: 25% !important;
-}
-#recent .contentL #kindTabContent div[id="tab96"] th.rateTd,
-#recent .contentL #kindTabContent div[id="tab108"] th.rateTd {
-  width: 190px !important;
-}
-#recent .contentL #kindTabContent div[id="tab96"]>table,
-#recent .contentL #kindTabContent div[id="tab108"]>table {
-  width: 100%;
-  margin-bottom: 1rem;
-  color: #212529;
-  border-collapse: collapse;
-}
-#recent .contentL #kindTabContent div[id="tab96"]>table:nth-child(2),
-#recent .contentL #kindTabContent div[id="tab108"]>table:nth-child(2) {
-  height: 950px;
-}
-#recent .contentL #kindTabContent>div>table thead tr:nth-child(2),
-#recent .contentL #kindTabContent div[id="tab96"] table thead tr:nth-child(2),
-#recent .contentL #kindTabContent div[id="tab96"] table[class="96Table"] thead tr:nth-child(2),
-#recent .contentL #kindTabContent div[id="tab108"] table thead tr:nth-child(2),
-#recent .contentL #kindTabContent div[id="tab108"] table[class="108Table"] thead tr:nth-child(2),
-#recent .contentL #kindTabContent div[id="tab31"] table[o="31Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab32"] table[o="32Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab41"] table[o="41Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab90"] table[o="90Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab91"] table[o="91Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab92"] table[o="92Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab171"] table[o="171Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab100"] table[o="100Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab101"] table[o="101Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab102"] table[o="102Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab103"] table[o="103Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab104"] table[o="104Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab105"] table[o="105Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab64"] table[o="64Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab66"] table[o="66Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab67"] table[o="67Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab33"] table[o="33Offest"] tr th,
-#recent .contentL #kindTabContent div[id="34Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="35Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="36Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="37Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="38Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="tab42"] table[o="42Offest"] tr th,
-#recent .contentL #kindTabContent div[id="43Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="44Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="45Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="46Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="47Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="tab172"] table[o="172Offest"]>thead tr:nth-child(2) th {
-  background-color:#fdd8dc;
-  border: 1px solid #eaa2a2;
-  vertical-align: middle;
-}
-#recent .contentL #kindTabContent div[id="tab33"] table[o="33Offest"] tr th,
-#recent .contentL #kindTabContent div[id="34Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="35Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="36Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="37Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="38Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="tab42"] table[o="42Offest"] tr th,
-#recent .contentL #kindTabContent div[id="43Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="44Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="45Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="46Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="47Tabs"] tr th,
-#recent .contentL #kindTabContent div[id="tab172"] table[o="172Offest"]>thead tr:nth-child(2) th {
-  font-size: 12px;
-  letter-spacing: -1px;
-  vertical-align: middle;
-}
-#recent .contentL #kindTabContent>div>table thead tr:nth-child(2) th:last-child,
-#recent .contentL #kindTabContent div[id="tab96"] table thead tr:nth-child(2) th:last-child,
-#recent .contentL #kindTabContent div[id="tab108"] table thead tr:nth-child(2) th:last-child {
-  border-right: 1px solid #eaa2a2;
-}
-#recent .contentL #kindTabContent div[id="tab96"] table tbody tr td.valgnTop,
-#recent .contentL #kindTabContent div[id="tab108"] table tbody tr td.valgnTop {
-  display: inline-flex;
-  text-align: center;
-}
-#recent .contentL #kindTabContent div[id="tab96"] table tbody tr td.valgnTop,
-#recent .contentL #kindTabContent div[id="tab96"] table tbody tr td.valgnTop:first-child,
-#recent .contentL #kindTabContent div[id="tab108"] table tbody tr td.valgnTop,
-#recent .contentL #kindTabContent div[id="tab108"] table tbody tr td.valgnTop:first-child {
-  width: 100%;
-}
-#recent .contentL #kindTabContent div[id="tab96"] table tbody tr td.valgnTop table td,
-#recent .contentL #kindTabContent div[id="tab108"] table tbody tr td.valgnTop table td {
-  border: 1px solid #eaa2a2;
-}
-#recent .contentL #kindTabContent div[id="tab96"] table tbody tr:first-child td.valgnTop:first-child table,
-#recent .contentL #kindTabContent div[id="tab108"] table tbody tr:first-child td.valgnTop:first-child table {
-  width: 100%;
-  position: absolute;
-  top: 90px;
-}
-#recent .contentL #kindTabContent div[id="tab96"] table[class="96Table"],
-#recent .contentL #kindTabContent div[id="tab108"] table[class="108Table"] {
-  width: 100%;
-  position: absolute;
-  top: 763px;
-  text-align: center;
-}
-#recent .contentL #kindTabContent div[id="tab96"] table tbody tr td.valgnTop:nth-child(2) table,
-#recent .contentL #kindTabContent div[id="tab96"] table tbody tr td.valgnTop:nth-child(3) table,
-#recent .contentL #kindTabContent div[id="tab108"] table tbody tr td.valgnTop:nth-child(2) table,
-#recent .contentL #kindTabContent div[id="tab108"] table tbody tr td.valgnTop:nth-child(3) table {
-  width: 24%;
-  position: absolute;
-  top: 320px;
-}
-#recent .contentL #kindTabContent div[id="tab96"] table tbody tr:nth-child(2) td.valgnTop:nth-child(1) table,
-#recent .contentL #kindTabContent div[id="tab96"] table tbody tr:nth-child(2) td.valgnTop:nth-child(2) table,
-#recent .contentL #kindTabContent div[id="tab108"] table tbody tr:nth-child(2) td.valgnTop:nth-child(1) table,
-#recent .contentL #kindTabContent div[id="tab108"] table tbody tr:nth-child(2) td.valgnTop:nth-child(2) table {
-  width: 24%;
-  position: absolute;
-  top: 320px;
-  left: 709px;
-}
-#recent .contentL #kindTabContent div[id="tab96"] table tbody tr:nth-child(2) td.valgnTop:nth-child(2) table,
-#recent .contentL #kindTabContent div[id="tab108"] table tbody tr:nth-child(2) td.valgnTop:nth-child(2) table {
-  left: 1059px;
-}
-#recent .contentL #kindTabContent div[id="tab96"] table.tab96Tb2 tbody tr:nth-child(1) td.valgnTop:nth-child(1) table,
-#recent .contentL #kindTabContent div[id="tab96"] table.tab96Tb2 tbody tr:nth-child(1) td.valgnTop:nth-child(2) table,
-#recent .contentL #kindTabContent div[id="tab96"] table.tab96Tb2 tbody tr:nth-child(2) td.valgnTop:nth-child(1) table,
-#recent .contentL #kindTabContent div[id="tab96"] table.tab96Tb2 tbody tr:nth-child(2) td.valgnTop:nth-child(2) table,
-#recent .contentL #kindTabContent div[id="tab108"] table.tab108Tb2 tbody tr:nth-child(1) td.valgnTop:nth-child(1) table,
-#recent .contentL #kindTabContent div[id="tab108"] table.tab108Tb2 tbody tr:nth-child(1) td.valgnTop:nth-child(2) table,
-#recent .contentL #kindTabContent div[id="tab108"] table.tab108Tb2 tbody tr:nth-child(2) td.valgnTop:nth-child(1) table,
-#recent .contentL #kindTabContent div[id="tab108"] table.tab108Tb2 tbody tr:nth-child(2) td.valgnTop:nth-child(2) table {
-  width: 24%;
-  position: absolute;
-  top: 550px;
-  left: 15px;
-}
-#recent .contentL #kindTabContent div[id="tab96"] table.tab96Tb1 tbody tr:nth-child(1) td.valgnTop:nth-child(2) table,
-#recent .contentL #kindTabContent div[id="tab96"] table.tab96Tb2 tbody tr:nth-child(1) td.valgnTop:nth-child(2) table,
-#recent .contentL #kindTabContent div[id="tab108"] table.tab108Tb1 tbody tr:nth-child(1) td.valgnTop:nth-child(2) table,
-#recent .contentL #kindTabContent div[id="tab108"] table.tab108Tb2 tbody tr:nth-child(1) td.valgnTop:nth-child(2) table {
-  left: 365px;
-}
-#recent .contentL #kindTabContent div[id="tab96"] table.tab96Tb1 tbody tr:nth-child(2) td.valgnTop:nth-child(1) table,
-#recent .contentL #kindTabContent div[id="tab96"] table.tab96Tb2 tbody tr:nth-child(2) td.valgnTop:nth-child(1) table,
-#recent .contentL #kindTabContent div[id="tab108"] table.tab108Tb1 tbody tr:nth-child(2) td.valgnTop:nth-child(1) table,
-#recent .contentL #kindTabContent div[id="tab108"] table.tab108Tb2 tbody tr:nth-child(2) td.valgnTop:nth-child(1) table {
-  left: 715px;
-}
-#recent .contentL #kindTabContent div[id="tab96"] table.tab96Tb1 tbody tr:nth-child(2) td.valgnTop:nth-child(2) table,
-#recent .contentL #kindTabContent div[id="tab96"] table.tab96Tb2 tbody tr:nth-child(2) td.valgnTop:nth-child(2) table,
-#recent .contentL #kindTabContent div[id="tab108"] table.tab108Tb1 tbody tr:nth-child(2) td.valgnTop:nth-child(2) table,
-#recent .contentL #kindTabContent div[id="tab108"] table.tab108Tb2 tbody tr:nth-child(2) td.valgnTop:nth-child(2) table {
-  left: 1065px;
-}
-#recent .contentL #kindTabContent div[id="tab91"] table[o="91Offest"]>thead tr:nth-child(2) th,
-#recent .contentL #kindTabContent div[id="tab92"] table[o="92Offest"]>thead tr:nth-child(2) th {
-  font-size: 14px;
-}
-/* 樂透 */
-#recent .contentL #kindTabContent div[id="tab31"] th.w1.streak,
-#recent .contentL #kindTabContent div[id="tab41"] th.w1.streak {
-  width: 10% !important;
-}
-#recent .contentL #kindTabContent div[id="tab32"] th.w1.streak,
-#recent .contentL #kindTabContent div[id="tab47"] th.w1.streak {
-  width: 4% !important;
-}
-#recent .contentL #kindTabContent div[id="tab33"] th.w1.streak,
-#recent .contentL #kindTabContent div[id="tab34"] th.w1.streak,
-#recent .contentL #kindTabContent div[id="tab35"] th.w1.streak,
-#recent .contentL #kindTabContent div[id="tab36"] th.w1.streak,
-#recent .contentL #kindTabContent div[id="tab37"] th.w1.streak,
-#recent .contentL #kindTabContent div[id="tab38"] th.w1.streak,
-#recent .contentL #kindTabContent div[id="tab42"] th.w1.streak,
-#recent .contentL #kindTabContent div[id="tab43"] th.w1.streak,
-#recent .contentL #kindTabContent div[id="tab44"] th.w1.streak,
-#recent .contentL #kindTabContent div[id="tab45"] th.w1.streak,
-#recent .contentL #kindTabContent div[id="tab46"] th.w1.streak,
-#recent .contentL #kindTabContent div[id="tab172"] th.w1.streak {
-  width: 3% !important;
-}
-#recent .contentL #kindTabContent div[id="tab33"] th.w1.rateTd,
-#recent .contentL #kindTabContent div[id="tab34"] th.w1.rateTd,
-#recent .contentL #kindTabContent div[id="tab35"] th.w1.rateTd,
-#recent .contentL #kindTabContent div[id="tab36"] th.w1.rateTd,
-#recent .contentL #kindTabContent div[id="tab37"] th.w1.rateTd,
-#recent .contentL #kindTabContent div[id="tab38"] th.w1.rateTd,
-#recent .contentL #kindTabContent div[id="tab42"] th.w1.rateTd,
-#recent .contentL #kindTabContent div[id="tab43"] th.w1.rateTd,
-#recent .contentL #kindTabContent div[id="tab44"] th.w1.rateTd,
-#recent .contentL #kindTabContent div[id="tab45"] th.w1.rateTd,
-#recent .contentL #kindTabContent div[id="tab46"] th.w1.rateTd {
-  width: 95px !important;
-}
-#recent .contentL #kindTabContent div[id="tab47"] th.w1.rateTd {
-  width: 115px !important;
-}
-#recent .contentL #kindTabContent div[id="tab90"] th.rateTd,
-#recent .contentL #kindTabContent div[id="tab91"] th.w1.rateTd,
-#recent .contentL #kindTabContent div[id="tab92"] th.w1.rateTd,
-#recent .contentL #kindTabContent div[id="tab172"] th.w1.rateTd {
-  width: 130px !important;
-}
-#recent .contentL #kindTabContent div[id="tab33"] .singleRatePlusMulti+span,
-#recent .contentL #kindTabContent div[id="tab33"] .singleRateMinusMulti+span,
-#recent .contentL #kindTabContent div[id="tab34"] .singleRatePlusMulti+span,
-#recent .contentL #kindTabContent div[id="tab34"] .singleRateMinusMulti+span,
-#recent .contentL #kindTabContent div[id="tab35"] .singleRatePlusMulti+span,
-#recent .contentL #kindTabContent div[id="tab35"] .singleRateMinusMulti+span,
-#recent .contentL #kindTabContent div[id="tab36"] .singleRatePlusMulti+span,
-#recent .contentL #kindTabContent div[id="tab36"] .singleRateMinusMulti+span,
-#recent .contentL #kindTabContent div[id="tab37"] .singleRatePlusMulti+span,
-#recent .contentL #kindTabContent div[id="tab37"] .singleRateMinusMulti+span,
-#recent .contentL #kindTabContent div[id="tab38"] .singleRatePlusMulti+span,
-#recent .contentL #kindTabContent div[id="tab38"] .singleRateMinusMulti+span,
-#recent .contentL #kindTabContent div[id="tab42"] .singleRatePlusMulti+span,
-#recent .contentL #kindTabContent div[id="tab42"] .singleRateMinusMulti+span,
-#recent .contentL #kindTabContent div[id="tab43"] .singleRatePlusMulti+span,
-#recent .contentL #kindTabContent div[id="tab43"] .singleRateMinusMulti+span,
-#recent .contentL #kindTabContent div[id="tab44"] .singleRatePlusMulti+span,
-#recent .contentL #kindTabContent div[id="tab44"] .singleRateMinusMulti+span,
-#recent .contentL #kindTabContent div[id="tab45"] .singleRatePlusMulti+span,
-#recent .contentL #kindTabContent div[id="tab45"] .singleRateMinusMulti+span,
-#recent .contentL #kindTabContent div[id="tab46"] .singleRatePlusMulti+span,
-#recent .contentL #kindTabContent div[id="tab46"] .singleRateMinusMulti+span,
-#recent .contentL #kindTabContent div[id="tab47"] .singleRatePlusMulti+span,
-#recent .contentL #kindTabContent div[id="tab47"] .singleRateMinusMulti+span {
-  width: 45px;
-}
-#recent .contentL #kindTabContent div[id="tab33"] .singleRatePlusMulti,
-#recent .contentL #kindTabContent div[id="tab33"] .singleRateMinusMulti,
-#recent .contentL #kindTabContent div[id="tab34"] .singleRatePlusMulti,
-#recent .contentL #kindTabContent div[id="tab34"] .singleRateMinusMulti,
-#recent .contentL #kindTabContent div[id="tab35"] .singleRatePlusMulti,
-#recent .contentL #kindTabContent div[id="tab35"] .singleRateMinusMulti,
-#recent .contentL #kindTabContent div[id="tab36"] .singleRatePlusMulti,
-#recent .contentL #kindTabContent div[id="tab36"] .singleRateMinusMulti,
-#recent .contentL #kindTabContent div[id="tab37"] .singleRatePlusMulti,
-#recent .contentL #kindTabContent div[id="tab37"] .singleRateMinusMulti,
-#recent .contentL #kindTabContent div[id="tab38"] .singleRatePlusMulti,
-#recent .contentL #kindTabContent div[id="tab38"] .singleRateMinusMulti,
-#recent .contentL #kindTabContent div[id="tab42"] .singleRatePlusMulti,
-#recent .contentL #kindTabContent div[id="tab42"] .singleRateMinusMulti,
-#recent .contentL #kindTabContent div[id="tab43"] .singleRatePlusMulti,
-#recent .contentL #kindTabContent div[id="tab43"] .singleRateMinusMulti,
-#recent .contentL #kindTabContent div[id="tab44"] .singleRatePlusMulti,
-#recent .contentL #kindTabContent div[id="tab44"] .singleRateMinusMulti,
-#recent .contentL #kindTabContent div[id="tab45"] .singleRatePlusMulti,
-#recent .contentL #kindTabContent div[id="tab45"] .singleRateMinusMulti,
-#recent .contentL #kindTabContent div[id="tab46"] .singleRatePlusMulti,
-#recent .contentL #kindTabContent div[id="tab46"] .singleRateMinusMulti,
-#recent .contentL #kindTabContent div[id="tab91"] .singleRatePlus,
-#recent .contentL #kindTabContent div[id="tab91"] .singleRateMinus,
-#recent .contentL #kindTabContent div[id="tab92"] .singleRatePlus,
-#recent .contentL #kindTabContent div[id="tab92"] .singleRateMinus,
-#recent .contentL #kindTabContent div[id="tab172"] .singleRatePlus,
-#recent .contentL #kindTabContent div[id="tab172"] .singleRateMinus {
-  width: 15px;
-  height: 15px;
-  border-radius: 3px;
-  line-height: 1.35;
-}
-
-#recent .contentR {
-  width: 24%;
-  display: inline-block;
-  vertical-align: top;
-}
-#recent .contentR>div {
-  position: relative;
-  top: 128px;
-  text-align: center;
-}
-#recent .contentR>div>table thead th {
-  background-color: #fdd8dc;
-  border: 1px solid #eaa2a2;
-}
-#recent .contentR>div>table tbody th {
-  background-color:#ffffd9;
-  text-align: center !important;
-}
-#recent .contentR>div>table tbody th,#recent .contentR>div>table tbody td,
-#recent .contentL #kindTabContent div[id="tab96"] table[class="96Table"] tbody td,
-#recent .contentL #kindTabContent div[id="tab108"] table[class="108Table"] tbody td {
-  border: 1px solid #eaa2a2;
-}
-#recent .contentL #kindTabContent div[id="tab96"] table[class="96Table"] tbody tr:hover,
-#recent .contentL #kindTabContent div[id="tab108"] table[class="108Table"] tbody tr:hover {
+/* 表格類單雙列跳色 */
+.lotteryTb>table>tbody>tr:nth-child(even),
+main.lotteryAddMain form table.table>tbody>tr:nth-child(odd),
+table#autoRateList>tbody>tr:nth-child(even),
+table#baseRateList>tbody>tr:nth-child(even),
+table.historyFormTb>tbody>tr:nth-child(even),
+table.immediateReportTb>tbody>tr:nth-child(even),
+table.whiteLabelTb>tbody>tr:nth-child(even),
+table.memberTb>tbody>tr:nth-child(even),
+table.agentTb>tbody>tr:nth-child(even),
+table.subAccountTb>tbody>tr:nth-child(even),
+table.myProfileTb>tbody>tr:nth-child(even),
+table.phpLogOp>tbody>tr:nth-child(even),
+table.newsTb>tbody>tr:nth-child(even),
+table.voucherManageListTb>tbody>tr:nth-child(even),
+table.phpLogOpTb>tbody>tr:nth-child(even),
+table.ipBlackListTb>tbody>tr:nth-child(even),
+table.ipAutoblockListTb>tbody>tr:nth-child(even) {
+  background: #ececec;
+}
+.lotteryTb>table>tbody>tr:nth-child(even):hover,
+main.lotteryAddMain form table.table>tbody>tr:nth-child(odd):hover,
+table#autoRateList>tbody>tr:nth-child(even):hover,
+table#baseRateList>tbody>tr:nth-child(even):hover,
+table.historyFormTb>tbody>tr:nth-child(even):hover,
+table.immediateReportTb>tbody>tr:nth-child(even):hover,
+table.whiteLabelTb>tbody>tr:nth-child(even):hover,
+table.memberTb>tbody>tr:nth-child(even):hover,
+table.agentTb>tbody>tr:nth-child(even):hover,
+table.subAccountTb>tbody>tr:nth-child(even):hover,
+table.myProfileTb>tbody>tr:nth-child(even):hover,
+table.phpLogOpTb>tbody>tr:nth-child(even):hover,
+table.newsTb>tbody>tr:nth-child(even):hover,
+table.voucherManageListTb>tbody>tr:nth-child(even):hover,
+table.phpLogOpTb>tbody>tr:nth-child(even):hover,
+table.ipBlackListTb>tbody>tr:nth-child(even):hover,
+table.ipAutoblockListTb>tbody>tr:nth-child(even):hover {
   background: rgb(255,237,151);
 }
-#recent .contentR table tbody tr:hover {
-  background: transparent;
+/* 頁碼 */
+nav.pagebar a.btn {
+  height: 1.5rem;
+  min-width: 3.5rem;
+  padding: unset;
+  line-height: 1.4;
 }
-
-#recent .contentR #tbt {
-  font-weight: normal !important;
-}
-
-#recent .contentR .kindAmount {
-  font-weight: normal;
-}
-
-#recent .contentL #kindTabContent div table td,
-#recent .contentL #kindTabContent div table th {
-  border-top: unset;
-}
-#recent .contentL #kindTabContent div table thead th {
-  border-left: unset;
-  border-right: unset;
-}
-#recent .contentL #kindTabContent .table td,
-#recent .contentL #kindTabContent .table th {
-  padding: 0px;
-  vertical-align: middle;
-}
-.display-inline-flex {
-  display: inline-flex;
-  vertical-align: top;
-}
-.width100 {
-  text-align: center;
-  width: 100%;
-}
-.width50 {
-  text-align: center;
-  width: 50%;
-}
-.width25 {
-  text-align: center;
-  width: 25%;
-}
-.width33 {
-  text-align: center;
-  width: calc(100% / 3);
-}
-.width20 {
-  text-align: center;
-  width: 25%;
-}
-#recent .contentL .w1 {
-  width: 25%;
-}
-#recent .contentL .rateTd {
-  width: 190px;
-}
-td.width100 table thead tr th.w1,
-td.width50 table thead tr th.w1,
-td.width33 table thead tr th.w1 {
-  width: 25% !important;
-}
-td.width25 table thead tr th.w1,
-td.width20 table thead tr th.w1 {
-  width: 15% !important;
-}
-td.width100 table thead tr th.rateTd,
-td.width50 table thead tr th.rateTd,
-td.width25 table thead tr th.rateTd,
-td.width20 table thead tr th.rateTd,
-td.width33 table thead tr th.rateTd {
-  width: 190px !important;
-}
-table[o="172Offest"] thead tr th.w1 {
-  width: 5% !important;
-}
-table[o="172Offest"] thead tr th.rateTd {
-  width: 190px !important;
-}
-
-
-/* 組數詳情 */
-.qctextDialog table,
-.qctextDialog td {
-  border: none !important;
-}
-
-/* 複式組合選擇 */
-.fastBtnDiv.ulCust {
-  margin-bottom: 0px;
-}
-
-.ulCust {
-  margin-bottom: 10px;
-}
-
-.ulCust li {
-  display: inline-block;
-  font-size: 12px;
-  line-height: 1;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-.ulCust li label {
-  cursor: pointer;
-}
-
-.ulCust li div {
-  display: inline-block;
-}
-
-.ulCust input[type="checkbox"],
-.ulCust input[type="radio"] {
-  display: none;
-}
-
-.ulCust input[type="checkbox"]+label,
-.ulCust input[type="radio"]+label {
-  display: inline-block;
-  margin-left: 5px;
-  text-align: left;
-}
-
-
-
-.ulCust input[type="radio"]+.labels::before {
-  border-radius: 50%;
-  padding-right: 1px;
-}
-
-#quickChose1,
-#quickChose2,
-#quickChose3,
-#quickChose4 {
-  line-height: 25px;
-}
-
-#quickChose1 label,
-#quickChose2 label,
-#quickChose3 label,
-#quickChose4 label {
-  margin-right: 7px;
-}
-
-#quickChose1 .quick_select,
-#quickChose2 .quick_select,
-#quickChose3 .quick_select,
-#quickChose4 .quick_select {
-  display: inline-block;
-  margin-left: 20px;
-}
-
-/* 操盤、補貨 的 合肖 連碼 自選不中 過關 連肖 連尾 */
-table.table-hover1 {
-  margin-top: 5px;
-}
-
-table.table-hover1 thead tr th.itemForm {
-  width: 200px;
-}
-
-table.table-hover1 thead tr th.w1 {
-  width: 200px;
-}
-
-/* 快選 */
-.fastBtnDiv {
-  margin-top: 5px;
-}
-
-.fastBtnDiv .fast_button,
-.fastBtnDiv .offestDiv {
-  margin-bottom: 5px;
-}
-
-.fastBtnDiv .fast_button button,
-.fastBtnDiv .offestDiv button {
-  height: 35px;
-  color: #666;
-  background: #F2F2F2;
-  border: 1px solid #DDD;
-  border-radius: 1px;
-}
-
-.fastBtnDiv .fast_button button:hover,
-.fastBtnDiv .offestDiv button:hover {
-  background: #E7E7E7;
-  border: 1px solid #AAA;
-}
-
-.fastBtnDiv .fast_button button i,
-.fastBtnDiv .offestDiv button i {
-  margin: 0px;
-}
-
-.fastBtnDiv .offestDiv {
-  line-height: 25px;
-  /* margin-top: 5px; */
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 465px;
-}
-
-div[id*="quickChose"] span[id*="quickTitle"]{
-  display: inline-block;
-  min-width: 50px;
-}
-
-.specifiedOdds {
-  display: inline-block;
-  margin-left: 100px;
-}
-
-/* 正負號樣式 */
-.singleRatePlus,
-.singleRateMinus,
-.singleRatePlusMulti,
-.singleRateMinusMulti,
-.kindRatePlus,
-.kindRateMinus,
-.plusbtn,
-.minusbtn {
-  width: 11px;
-  height: 24px;
-  display: inline-block;
-  background: transparent;
-  border: none;
-  padding: 0px;
-}
-
-.singleRatePlus:hover,
-.singleRateMinus:hover,
-.singleRatePlusMulti:hover,
-.singleRateMinusMulti:hover,
-.kindRatePlus:hover,
-.kindRateMinus:hover,
-.plusbtn:hover,
-.minusbtn:hover {
-  background: transparent;
-  border: none;
-}
-
-.singleRatePlus i,
-.singleRateMinus i,
-.singleRatePlusMulti i,
-.singleRateMinusMulti i,
-.kindRatePlus i,
-.kindRateMinus i,
-.plusbtn i,
-.minusbtn i {
-  -webkit-transform: scale(0.75);
-  transform: scale(0.75);
-}
-
-/* 正負號賠率寬度固定 */
-.singleRatePlus+span,
-.singleRateMinus+span,
-.singleRatePlusMulti+span,
-.singleRateMinusMulti+span,
-.kindRatePlus+span,
-.kindRateMinus+span {
-  width: 80px;
-  margin-left: -3px;
-  display: inline-block;
-  line-height: 2;
-}
-
-/* 分頁 */
-.nav {
-  width: 100%;
-  height: 40px;
-}
-
-#onlineBetContent .nav {
-  /* height: 0px; */
-  display: inline-block;
-  margin-top: 10px;
-  clear: both;
-}
-
-#onlineBetContent #recent a[data-toggle="tab"] {
-  padding: 5px;
-}
-
-#tab47 .nav {
-  height: 40px;
-}
-
 .pagination {
   position: absolute;
   bottom: 6px;
   right: 0px;
 }
-
 .pagination li.disabled {
   display: none;
 }
-
 .pagination li {
   display: inline-block;
 }
-
 .pagination li a {
   font-size: 11px;
 }
-
 .pagination>li:first-child>a,
 .pagination>li:first-child>span {
   margin-left: 0;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
 }
-
 .pagination>li:last-child>a,
 .pagination>li:last-child>span {
   border-radius: 0px 4px 4px 0px;
 }
-
 .pagination>li>a,
 .pagination>li>span {
   padding: 3px 12px;
   border: 1px solid #DDD;
 }
-
 .pagination .jumpPage {
   display: inline-block;
   margin-left: 5px;
 }
-
-.zu_xuan_replacetable {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#recent .contentL #kindTabContent nav.nav,
+div#rateRecordDialog nav {
+  position: relative;
+  height: 20px;
+}
+#recent .contentL #kindTabContent .pagination,
+div#rateRecordDialog .pagination {
+  position: absolute;
+  bottom: unset;
+  right: 0px;
+}
+#recent .contentL #kindTabContent .pagination li.active a,
+div#rateRecordDialog .pagination li.active a {
+  color: #fff;
+}
+#recent .contentL #kindTabContent .pagination li.disabled,
+div#rateRecordDialog .pagination li.disabled {
+  display: none;
+}
+#recent .contentL #kindTabContent .pagination li,
+div#rateRecordDialog .pagination li {
+  display: inline-block;
 }
 
-.zu_xuan_replacetable>div {
-  width: calc(100% / 5);
+#recent .contentL #kindTabContent .pagination li a,
+div#rateRecordDialog .pagination li a {
+  font-size: 11px;
 }
-
-.table-hover1 thead tr th {
-  /* height: 30px; */
+#recent .contentL #kindTabContent .pagination>li:first-child>a,
+#recent .contentL #kindTabContent .pagination>li:first-child>span,
+div#rateRecordDialog .pagination>li:first-child>a,
+div#rateRecordDialog .pagination>li:first-child>span {
+  margin-left: 0;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
 }
-
-#paymentBetContent .zu_xuan_replacetable {
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+#recent .contentL #kindTabContent .pagination>li:last-child>a,
+#recent .contentL #kindTabContent .pagination>li:last-child>span,
+div#rateRecordDialog .pagination>li:last-child>a,
+div#rateRecordDialog .pagination>li:last-child>span {
+  border-radius: 0px 4px 4px 0px;
 }
-
-#paymentBetContent .zu_xuan_replacetable>div {
-  width: calc(100% / 5);
+#recent .contentL #kindTabContent .pagination>li>a,
+#recent .contentL #kindTabContent .pagination>li>span,
+div#rateRecordDialog .paginatio>li>a,
+div#rateRecordDialog .paginatio>li>span {
+  padding: 1px 12px;
 }
-
-/* 總額 兩面長龍 */
-#bettotal,
-#changlong,
-#missout {
-  min-width: 49%;
-  float: left;
-}
-
-.bettotal,
-.changlong,
-.missout {
-  width: 99%;
-}
-
-.bettotal tbody th,
-.changlong tbody th,
-.missout tbody th {
-  text-align: left !important;
-  padding-left: 5px;
-}
-
-.bettotal tbody td,
-.changlong tbody td,
-.missout tbody td {
-  padding: 0 5px;
-  font-weight: bold;
-}
-
-.bettotal span,
-.changlong span,
-.missout span {
-  font-weight: bold !important;
-}
-
-#changlong,
-#missout {
-  margin-left: 1%;
-}
-
-th {
-  font-weight: bold;
-}
-
-.clTabs {
-  cursor: pointer;
-}
-
-/* @media only screen and (min-width: 1100px) {
-  #recent .contentL .rateTd {
-    width: 90px;
-  }
-} */
-
-
-/*全域設定*/
-div#golbalSettingTabContent,
-div.ipBlackTb div.tab-content,
-div.newsAddContent.tab-content,
-div.ipBlackMain div.tab-content {
-  margin-top: -5px !important;
-  margin-bottom: 10px;
-  padding: 20px;
-  border: 1px solid #dee2e6;
-  border-top: unset;
-}
-form#globalSettingForm .table thead th {
-  vertical-align: bottom;
-  border-bottom: 1px solid #dee2e6;
-}
-form#globalSettingForm .table-bordered td, .table-bordered th {
-  border: 1px solid #eaa2a2;
-}
-form#globalSettingForm ul {
-  list-style: none;
-  border-radius: 0.3rem;
-}
-form#globalSettingForm div.tab-pane div.row table tbody tr th {
-  width: 20%;
-}
-form#globalSettingForm div.tab-pane div.bootstrap-tagsinput {
-  padding: unset;
-  width: 100%;
-  height: 28px;
-}
-form#systemSettingForm input[type="date"] {
-  width: unset !important;
-}
-div.typeOfTransactionTb label {
-  margin-bottom: unset;
-}
-
-/*遊戲管理*/
-/*遊戲管理 - 彩種設置*/
-form#gameSettingForm #gameSettingList.gameSettingList tbody tr:nth-child(1),
-form#gameSettingForm #gameSettingList.gameSettingList tbody tr td:nth-child(1),
-form#gameSettingForm #menuSettingList.menuSettingList tbody tr td:nth-child(1),
-main.gameSettingListTb table#gameSettingList tbody tr td:nth-child(1) {
-  background-color: #fdd8dc;
-  font-weight: 700;
-}
-form#gameSettingForm #gameSettingList tbody tr td:nth-child(1),
-form#gameSettingForm #menuSettingList.menuSettingList tbody tr td:nth-child(1) {
-  text-align: right !important;
-}
-form#gameSettingForm #gameSettingList.gameSettingList tbody tr:nth-child(1),
-form#gameSettingForm #gameSettingList.gameSettingList tbody tr td:nth-child(1),
-form#gameSettingForm table#gameSettingList tbody tr td,
-form#gameSettingForm #menuSettingList.menuSettingList tbody tr td:nth-child(2) {
-  text-align: center;
-}
-form#gameSettingForm table#gameSettingList tbody tr td input,
-form#gameSettingForm table#gameSettingList tbody tr td select {
-  width: 160px;
-}
-form#gameSettingForm table#menuSettingList tbody tr td div label {
-  min-width: 120px;
-  margin-bottom: unset;
-}
-form#gameSettingForm table#menuSettingList tbody tr td div label span {
+#recent .contentL #kindTabContent .pagination .jumpPage,
+div#rateRecordDialog .paginatio .jumpPage {
+  display: inline-block;
   margin-left: 5px;
 }
-form#gameSettingForm table#menuSettingList tbody tr td:nth-child(3),
-form#gameSettingForm table#menuSettingList tbody tr td:nth-child(3) input {
-  width: 80px;
+#recent .contentL #kindTabContent .pagination>li>a,
+div#rateRecordDialog .paginatio>li>a {
+  border-right: 0;
 }
-form#gameSettingForm #menuSettingList.menuSettingList tbody tr td:nth-child(1),
-form#gameSettingForm #gameSettingList.gameSettingList tbody tr td:nth-child(1) {
-  width: 15%;
+#recent .contentL #kindTabContent .pagination>li:last-child>a,
+div#rateRecordDialog .paginatio>li:last-child>a {
+  border-right: 1px solid #bd2130;
 }
-form#gameSettingForm #menuSettingList.menuSettingList tbody tr td:nth-child(2) {
-  width: 35px;
-}
-/*遊戲管理 - 自動賠率設置*/
-#autoRateList tbody tr td:nth-child(1) {
-  background-color: #fdd8dc;
-}
-form#autoRatePassForm table.table tbody tr td input[type="password"] {
+div#pageArea {
   width: 100%;
+  margin-right: 15px;
 }
-form#autoRateForm div.toolbar label {
-  margin-bottom: unset;
+form#voucherManageForm nav.nav ul,
+div.phpLogOpPage nav.nav ul,
+form#ip-black-list nav.nav ul,
+div#pageArea nav.nav ul,
+div#recent nav.nav ul {
+  list-style: none;
+  position: unset;
 }
-/*遊戲管理 - 退水限額*/
-#backLimitForm thead th {
-  vertical-align: bottom;
-  border-bottom: 1px solid #eaa2a2;
-}
-#backLimitForm td,
-#backLimitForm th {
-  border: 1px solid #eaa2a2;
-}
-#backLimitForm thead th,
-#backLimitForm tbody th,
-#backLimitForm tbody tr td:nth-child(1) {
-  background-color:#fdd8dc;
-  text-align: center;
-  font-weight: bold;
-}
-#backLimitForm tbody tr td {
-  text-align: center;
-}
-#backLimitForm tbody tr:hover {
-  background: rgb(255,237,151);
-}
-#backLimitForm tbody tr[id="Tr1"] th,
-#backLimitForm tbody tr[id="Tr1"] td,
-#backLimitList tbody tr[class="fastEditType1"] td {
-  background: #e7ffff;
-}
-#backLimitForm tbody tr[id="Tr2"] th,
-#backLimitForm tbody tr[id="Tr2"] td,
-#backLimitList tbody tr[class="fastEditType2"] td {
-  background: #e8e8ff;
-}
-#backLimitForm tbody tr[id="Tr3"] th,
-#backLimitForm tbody tr[id="Tr3"] td,
-#backLimitList tbody tr[class="fastEditType3"] td {
-  background: floralwhite;
-}
-#backLimitForm tbody tr[id="Tr4"] th,
-#backLimitForm tbody tr[id="Tr4"] td,
-#backLimitList tbody tr[class="fastEditType4"] td {
-  background: honeydew;
-}
-#ratePercent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-form#backLimitSyncForm>div.modal-body>div:last-child {
-  text-align: center;
-}
-/*遊戲管理 - 賠率設置*/
-#baseRateForm button[type="button"].btn-danger.calcRate,
-#baseRateForm button[type="button"].btn-primary.calcRate {
-  width: 20px;
-  height: 20px;
-  padding: .5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-/*遊戲管理 - 注單管理*/
-div.betManageTb select,
-div.betManageTb input {
-  width: 250px;
-}
-div.betManageTb input[type="date"] {
-  width: 160px;
-}
-
-
-/*帳號管理 - 新增編輯*/
-main.userPermissionMain table.table {
-  text-align: center;
-}
-main.userPermissionMain table.table td,
-main.userPermissionMain table.table th {
+form#voucherManageForm nav.nav ul li a,
+div.phpLogOpPage nav.nav ul li a,
+form#ip-black-list nav.nav ul li a,
+div#pageArea nav.nav ul li a,
+div#recent nav.nav ul a {
+  height: 1.5rem;
+  min-width: 3.5rem;
   padding: unset;
-}
-main.userPermissionMain table.table thead tr th:nth-child(1) {
-  text-align: right;
-  padding-right: 5px;
-}
-main.userPermissionMain table.table tbody tr td:nth-child(1) {
-  text-align: right;
-  background-color: #fdd8dc;
-  padding-right: 5px;
-}
-/* .accountAddTb #profile>div {
-  width: 60%;
-  margin: 0 auto;
-}
-.accountAddTb #profile div.form-group.row,
-.accountEditTb #profile div.form-group.row {
-  margin: 0 auto;
-  padding: 5px 0;
-}
-.accountAddTb #profile div.form-group.row,
-.accountEditTb #profile div.form-group.row {
-  display: flex;
-  align-items: center;
-}
-.accountAddTb #profile div.form-group.row.remarksDiv label {
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.accountAddTb #profile div.form-group.row.remarksDiv textarea {
-  resize: none;
-  height: 120px;
-  border-radius: 0;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-.accountAddTb #profile div.form-group.row.remarksDiv .col-sm-9 {
-  padding-left: unset;
-}
-.accountAddTb #profile div.form-group.row>label,
-.accountEditTb #profile div.form-group.row>label {
-  background: #eaa2a2;
-  width: 120px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-.accountAddTb #profile div.form-group.row>div.col-sm-3,
-.accountEditTb #profile div.form-group.row>div.col-sm-3,
-.accountAddTb #profile div.form-group.row>div.col-sm-4,
-.accountEditTb #profile div.form-group.row>div.col-sm-4 {
-  height: 33.5px;
-  padding-left: unset;
-}
-.accountAddTb #profile div.form-group.row>div.col-sm-3 input,
-.accountEditTb #profile div.form-group.row>div.col-sm-3 input,
-.accountAddTb #profile div.form-group.row>div.col-sm-4 input,
-.accountEditTb #profile div.form-group.row>div.col-sm-4 input {
-  height: 33.5px !important;
-  border-radius: 0 !important;
-} */
-
-
-/*帳號管理 - 編輯*/
-#gameCategory_lotto table:nth-child(1) {
+  line-height: 1.4;
   text-align: center;
+  color: #c82333;
+  border-color: #bd2130;
 }
-#gameCategory_lotto table:nth-child(1) thead th:nth-child(1) {
-  width: calc(100% / 3);
+form#voucherManageForm nav.nav ul li.page-item.active a,
+div.phpLogOpPage nav.nav ul li a.text-white,
+form#ip-black-list nav.nav ul li.page-item.active a,
+div#pageArea nav.nav ul li a.text-white,
+div#recent nav.nav ul li.active a {
+  background: #c82333 !important;
+  color: #fff;
 }
-#gameCategory_lotto table:nth-child(2) thead td{
-  border: unset;
-  font-weight: bold;
-}
-#gameCategory_lotto table:nth-child(1) tbody tr td:nth-child(1),
-#gameCategory_lotto table:nth-child(2) tbody tr td:nth-child(1) {
-  background-color: #fdd8dc;
-  font-weight: 700;
-}
-/*操盤 - 項目球*/
+/* 項目球樣式 */
 #recent .contentL #kindTabContent div table td.fastChoseTd.item span.number,
 #recent .contentL #kindTabContent div table span.openNum span.number,
 #recent .contentL #kindTabContent div table td.fastChoseTd.item span.sb,
@@ -1408,8 +325,6 @@ div.lotteryTb table span.pk10 {
   justify-content: center;
   display: inline-flex;
   font-weight: 500;
-  /* text-shadow: 0.8px 0.8px #000, -0.8px 0.8px #000, 0.8px -0.8px #000, -0.8px -0.8px #000; */
-  /* background: url(../images/balls.png) top center; */
 }
 #recent .contentL #kindTabContent div table td.fastChoseTd.item span.thaiBall,
 #recent .contentL #kindTabContent div table span.openNum span.thaiBall,
@@ -1431,6 +346,7 @@ div.lotteryTb table span.sb {
 table.historyFormTb span.pk10,
 div.lotteryTb table span.pk10 {
   border-radius: 20%;
+  text-shadow: 0.8px 0.8px #000, -0.8px 0.8px #000, 0.8px -0.8px #000, -0.8px -0.8px #000;
 }
 span.sb.num1 {
   background-position: -1px 0 !important;
@@ -1488,18 +404,84 @@ div.lotteryTb table tbody tr td span {
   display: inline-flex;
   margin-left: 10px;
 }
-#recent .contentL ul.nav-tabs li span.nav-link {
+/* Tabs */
+.tab-content {
+  margin-top: -1px !important;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-top: unset;
+}
+.nav-tabs {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 5px;
+  list-style-type: none;
+  padding: 0px;
+  margin-top: 10px;
+  border-bottom: unset;
+}
+.nav-tabs li {
+  margin-right: 2px;
+}
+.nav-tabs li a,
+.nav-tabs li span.nav-link {
   display: block;
   min-width: 65px;
   background: #f2f2f2;
-  border: #e5e5e5 1px solid;
   text-align: center;
   color: #555;
   line-height: 1.5;
   border-radius: 2px;
+  border: 1px solid transparent;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
 }
-#recent .contentL ul.nav-tabs li.active a,
-#recent .contentL ul.nav-tabs li.active span.nav-link {
+.nav-tabs li.active a,
+.nav-tabs li.active span.nav-link {
+  color: #495057;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+.nav-link {
+  cursor: pointer;
+}
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  border-color: #dee2e6 #dee2e6 transparent;
+}
+th[class="clTabs"] {
+  display: block;
+  min-width: 65px;
+  background-color: #f2f2f2 !important;
+  text-align: center;
+  color: #555;
+  line-height: 1.5;
+  border-radius: 2px;
+  border: 1px solid transparent !important;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  height: 100% !important;
+  display: table-cell;
+}
+th[class="clTabs"]:hover {
+  background: rgb(255,237,151) !important;
+}
+th[class="colorRed"] {
+  background-color: #a90000 !important;
+  color: #fff;
+}
+#recent .contentL ul.nav-tabs li a {
+  border-radius: 2px;
+  border: #e5e5e5 1px solid;
+  padding: 2px;
+}
+#recent .contentL ul.nav-tabs li a:hover {
+  text-decoration: none;
+  background: rgb(255,237,151);
+}
+#recent .contentL ul.nav-tabs li.active a {
   background: #a90000;
   border: 1px solid #510000;
   color: #fff;
@@ -1508,118 +490,325 @@ div.lotteryTb table tbody tr td span {
   text-decoration: none;
   background: #a90000;
 }
-#recent .contentL ul.nav-tabs li a:hover {
-  text-decoration: none;
-  background: rgb(255,237,151);
-}
-/* 外部參考 */
-div.webRefer {
-  cursor: pointer;
-}
-/* 注單列表彈跳 Dialog */
-.ui-dialog .ui-dialog-titlebar-close:before {
-  content: "X";
-  line-height: 1;
-  display: block;
-  color: #000000;
-}
-#betListDialog>table>tbody>tr a {
-  color: #007bff;
-}
-#betListDialog>table>tbody>tr:last-child {
-  background-color: #fdd8dc;
-  font-weight: 700;
-}
-#betListDialog>nav,
-#rateRecordDialog>nav {
-  display: block;
-  height: 55px;
-}
-#betListDialog>nav>ul,
-#rateRecordDialog>nav>ul {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  padding-right: 17px;
-}
-
-/*遊戲規則*/
-#twrap .list_type {
-  width: 17px;
-  height: 17px;
+/* 加減號按鈕及操盤頁按鈕 */
+button[type="button"].kindRatePlus,
+button[type="button"].singleRatePlus,
+button[type="button"].singleRatePlusMulti,
+button[type="button"].plusbtn,
+button[type="button"].kindRateMinus,
+button[type="button"].singleRateMinus,
+button[type="button"].singleRateMinusMulti,
+button[type="button"].minusbtn {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  line-height:1.35;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  background-color: #c82333;
+  border-color: #bd2130;
+  font-weight: 900;
+}
+button[type="button"].kindRateMinus,
+button[type="button"].singleRateMinus,
+button[type="button"].singleRateMinusMulti,
+button[type="button"].minusbtn {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+button[type="button"].kindRatePlus i,
+button[type="button"].singleRatePlus i,
+button[type="button"].singleRatePlusMulti i,
+button[type="button"].plusbtn i,
+button[type="button"].kindRateMinus i,
+button[type="button"].singleRateMinus i,
+button[type="button"].singleRateMinusMulti i,
+button[type="button"].minusbtn i {
+  margin-right: unset;
+}
+.ulCust input[type="checkbox"]+.labels::before,
+.ulCust input[type="radio"]+.labels::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.ulCust input[type="checkbox"]:checked+.labels::before,
+.ulCust input[type="radio"]:checked+.labels::before {
+  content: "✓";
+  text-align: center;
+  line-height: 13px;
+  color:#fff;
+  background: #a90000;
+  border: 1px solid #510000 !important;
+}
+.ulCust input[type="checkbox"],
+.ulCust input[type="radio"] {
+  display: none;
+}
+.ulCust input[type="radio"]+.labels::before {
+  border-radius: 50%;
+  padding-right: 1px;
+}
+div#quickChose1 label span::before,
+div#quickChose2 label span::before,
+div#quickChose3 label span::before,
+div#quickChose4 label span::before {
+  margin-right: 1px;
+  padding: 6px;
+  border: 1px solid #aaa;
+  display: inline-flex !important;
   justify-content: center;
   align-items: center;
-  margin-right: 5px;
-  font-size: .75rem;
-  border-radius: 50%;
-  color: #fff;
-  background: #c71316;
+  cursor: pointer;
 }
-#twrap .tb-bd tr:nth-child(odd) td {
-  padding: 15px 0;
-  vertical-align: middle;
-  text-align: center;
-  border: 1px solid #ccc;
+#quickChose1,
+#quickChose2,
+#quickChose3,
+#quickChose4 {
+  line-height: 25px;
+}
+#quickChose1 label,
+#quickChose2 label,
+#quickChose3 label,
+#quickChose4 label {
+  margin-right: 7px;
+}
+#quickChose1 .quick_select,
+#quickChose2 .quick_select,
+#quickChose3 .quick_select,
+#quickChose4 .quick_select {
+  display: inline-block;
+  margin-left: 20px;
 }
 
-
-/* 报表表格樣式 */
-table.papers .bg-member{ background-color: #9bc3e4;}
-table.papers .bg-downline{ background-color: #f3af8a;}
-table.papers .bg-myself{ background-color: #ffd674;}
-table.papers .bg-upline{ background-color: #c8deb7;}
-table.papers .bg-footer{ background: lightgoldenrodyellow;}
-
-/* 共用樣式 */
-.color_red{ color: red;}
-.color_skin{ color: #ff880e;}
-.color_blue{ color:#759aaf;}
-.color_green{ color: #28a745;}
-.font_bold{ font-weight: bold;}
-
-/* 外部參考樣式 */
-div#navigationArea>div.webRefer {
-  width: 150px;
-  background: linear-gradient(#EB3A42 0%,#ff949e 100%);
-  border: none !important;
-  box-shadow: 1px 1px 3px #860e19;
-}
-div#navigationArea>div.webRefer>p {
-  margin-bottom: 5px;
+.fastBtnDiv {
   margin-top: 5px;
-  color: #fff;
 }
-div#navigationArea>div.webRefer>img {
-  width: 75px;
-  height: 75px;
-  margin-bottom: 0 !important;
+.fastBtnDiv .fast_button,
+.fastBtnDiv .offestDiv {
+  margin-bottom: 5px;
+  word-break: keep-all;
+  white-space: pre;
 }
-div#navigationArea>div.webRefer:hover {
-  box-shadow: inset -2px -2px 6px #860e19, inset 2px 2px 6px #860e19;
+.fastBtnDiv .fast_button button,
+.fastBtnDiv .offestDiv button,
+.specifiedOdds button {
+  color: #666;
+  background: #F2F2F2;
+  border: 1px solid #DDD;
+  border-radius: 1px;
 }
-/*表格類單雙列跳色*/
-.lotteryTb>table>tbody>tr:nth-child(even),
-table.whiteLabelTb>tbody>tr:nth-child(even),
-table.memberTb>tbody>tr:nth-child(even),
-table.agentTb>tbody>tr:nth-child(even),
-table.subAccountTb>tbody>tr:nth-child(even),
-table.myProfileTb>tbody>tr:nth-child(even),
-table.phpLogOp>tbody>tr:nth-child(even),
-table.newsTb>tbody>tr:nth-child(even),
-table.voucherManageListTb>tbody>tr:nth-child(even) {
-  background: #ececec;
+.fastBtnDiv .fast_button button:hover,
+.fastBtnDiv .offestDiv button:hover,
+.specifiedOdds button:hover {
+  background: #E7E7E7;
+  border: 1px solid #AAA;
 }
-.lotteryTb>table>tbody>tr:nth-child(even):hover,
-table.whiteLabelTb>tbody>tr:nth-child(even):hover,
-table.memberTb>tbody>tr:nth-child(even):hover,
-table.agentTb>tbody>tr:nth-child(even):hover,
-table.subAccountTb>tbody>tr:nth-child(even):hover,
-table.myProfileTb>tbody>tr:nth-child(even):hover,
-table.phpLogOpTb>tbody>tr:nth-child(even):hover,
-table.newsTb>tbody>tr:nth-child(even):hover,
-table.voucherManageListTb>tbody>tr:nth-child(even):hover {
-  background: rgb(255,237,151);
+.fastBtnDiv .fast_button button i,
+.fastBtnDiv .offestDiv button i {
+  margin: 0px;
+}
+.fastBtnDiv .offestDiv {
+  display: inline-flex;
+  align-items: center;
+}
+.fastBtnDiv .offestDiv input.offestInput {
+  min-width: 120px;
+}
+div[id*="quickChose"] span[id*="quickTitle"]{
+  display: inline-block;
+}
+.specifiedOdds {
+  display: inline-block;
+  word-break: keep-all;
+  white-space: pre;
+}
+
+/* 操盤 */
+table#onlineBetTop button {
+  word-break: keep-all;
+  white-space: pre;
+}
+div#onlineBetContent table th,
+div#onlineBetContent table td {
+  padding: unset;
+  text-align: center;
+}
+#recent .contentL #kindTabContent div[id="tab31"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab32"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab41"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab90"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab91"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab92"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab64"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab66"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab67"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab100"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab101"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab102"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab103"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab104"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab105"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab171"] table thead tr:first-child th,
+#recent .contentL #kindTabContent div[id="tab172"] table thead tr:first-child th {
+  border-left: unset;
+  border-right: unset;
+  border-top: unset;
+  background-color: #fff;
+}
+/* 操盤內頁 */
+#recent>table thead tr,
+div.border>table.table thead tr,
+div.row table.table thead tr {
+  background-color:#fdd8dc;
+  text-align: center;
+}
+#recent .contentL #kindTabContent>div>table thead tr:nth-child(2),
+#recent .contentL #kindTabContent div[id="tab31"] table[o="31Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab32"] table[o="32Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab41"] table[o="41Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab90"] table[o="90Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab91"] table[o="91Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab92"] table[o="92Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab171"] table[o="171Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab100"] table[o="100Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab101"] table[o="101Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab102"] table[o="102Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab103"] table[o="103Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab104"] table[o="104Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab105"] table[o="105Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab64"] table[o="64Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab66"] table[o="66Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab67"] table[o="67Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab33"] table[o="33Offest"] tr th,
+#recent .contentL #kindTabContent div[id="34Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="35Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="36Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="37Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="38Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="tab42"] table[o="42Offest"] tr th,
+#recent .contentL #kindTabContent div[id="43Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="44Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="45Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="46Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="47Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="tab172"] table[o="172Offest"]>thead tr:nth-child(2) th {
+  background-color:#fdd8dc;
+  border: 1px solid #eaa2a2;
+  vertical-align: middle;
+}
+#recent .contentL #kindTabContent div[id="tab33"] table[o="33Offest"] tr th,
+#recent .contentL #kindTabContent div[id="34Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="35Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="36Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="37Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="38Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="tab42"] table[o="42Offest"] tr th,
+#recent .contentL #kindTabContent div[id="43Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="44Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="45Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="46Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="47Tabs"] tr th,
+#recent .contentL #kindTabContent div[id="tab172"] table[o="172Offest"]>thead tr:nth-child(2) th {
+  font-size: 12px;
+  letter-spacing: -1px;
+  vertical-align: middle;
+}
+#recent .contentL #kindTabContent div[id="tab91"] table[o="91Offest"]>thead tr:nth-child(2) th,
+#recent .contentL #kindTabContent div[id="tab92"] table[o="92Offest"]>thead tr:nth-child(2) th {
+  font-size: 14px;
+}
+#recent .contentL #kindTabContent div table td,
+#recent .contentL #kindTabContent div table th {
+  border-top: unset;
+  vertical-align: baseline;
+  font-weight: 700;
+}
+#recent .contentL #kindTabContent div.onlineBetRateTd span {
+  min-width: 20px;
+  display: block;
+  padding: 0 5px;
+}
+.fcChose, .choose {
+  background: #fffb1f !important;
+}
+#recent .contentL #kindTabContent div.fastBtnDiv ul.badge {
+  list-style: none;
+  border-radius: 0.3rem;
+  display: inline-flex;
+}
+#recent .contentR {
+  width: 25%;
+  display: inline-flex;
+  padding-top: 118px;
+}
+#recent .contentR>div {
+  text-align: center;
+  flex: 0.5
+}
+#recent .contentR div table tbody th {
+  background-color:#ffffd9;
+  text-align: center !important;
+}
+#recent .contentR table tbody tr:hover {
+  background: transparent;
+}
+#recent .contentR #tbt {
+  font-weight: normal !important;
+}
+#recent .contentR .kindAmount {
+  font-weight: normal;
+}
+/* 總額 兩面長龍 */
+.bettotal,
+.changlong,
+.missout {
+  width: 99%;
+}
+.bettotal thead th,
+.changlong thead th,
+.missout thead th {
+  height: unset;
+}
+.bettotal tbody th,
+.changlong tbody th,
+.missout tbody th {
+  text-align: left !important;
+  padding-left: 5px;
+  height: unset;
+}
+.bettotal tbody td,
+.changlong tbody td,
+.missout tbody td {
+  padding: 0 5px;
+  font-weight: bold;
+  height: unset;
+}
+.bettotal span,
+.changlong span,
+.missout span {
+  font-weight: bold !important;
+}
+#changlong,
+#missout {
+  margin-left: 1%;
+}
+.clTabs {
+  cursor: pointer;
+}
+
+/* 帳號管理 */
+table.whiteLabelTb thead tr th label,
+table.agentTb thead tr th label,
+table.memberTb thead tr th label,
+main.account_info div#profile table.table {
+  margin-bottom: 0;
 }
 table.whiteLabelTb>tbody>tr a.btn,
 table.memberTb>tbody>tr a.btn,
@@ -1641,23 +830,331 @@ table.agentTb>tbody>tr a.btn span {
 .mbMinus4 {
   margin-bottom: -4px !important;
 }
-table.agentTb>thead>tr>th.creditLeftTh {
+table.agentTb>thead>tr>th.creditLeftTh,
+table.whiteLabelTb>thead>tr>th.creditLeftTh {
   width: 255px;
 }
-table.agentTb>thead>tr>th.creditLeftTh>div {
+table.memberTb>thead>tr>th.creditLeftTh {
+  width: 350px;
+}
+table.agentTb>thead>tr>th.creditLeftTh>div,
+table.whiteLabelTb>thead>tr>th.creditLeftTh>div,
+table.memberTb>thead>tr>th.creditLeftTh>div {
   display: inline-flex;
   justify-content: space-between;
   width: 100%;
   align-items: center;
 }
-table.agentTb>thead>tr>th.creditLeftTh>div>span:nth-child(2) {
+table.agentTb>thead>tr>th.creditLeftTh>div>span:nth-child(2),
+table.whiteLabelTb>thead>tr>th.creditLeftTh>div>span:nth-child(2),
+table.memberTb>thead>tr>th.creditLeftTh>div>span:nth-child(2) {
   display: flex;
   align-items: center;
 }
-table.agentTb>thead>tr>th.creditLeftTh>div>span:nth-child(2)>label {
+table.agentTb>thead>tr>th.creditLeftTh>div>span:nth-child(2)>label,
+table.whiteLabelTb>thead>tr>th.creditLeftTh>div>span:nth-child(2)>label,
+table.memberTb>thead>tr>th.creditLeftTh>div>span:nth-child(2)>label {
   margin-bottom: unset;
 }
+/* 帳號管理 - 信息彈跳窗 */
+main.account_info div#profile table.table thead tr th,
+main.account_info div#profile table.table tbody tr td {
+  border: 0;
+}
+main.account_info div#profile table.table thead tr,
+main.account_info div.tab-content div#profile div.form-group:last-child {
+  border-bottom: 1px solid #eaa2a2;
+}
+main.account_info div#profile table.table thead tr th,
+main.account_info div#profile table.table tbody tr td {
+  border-right: 1px solid #eaa2a2;
+}
+main.account_info div#profile table.table thead tr th:last-child,
+main.account_info div#profile table.table tbody tr td:last-child {
+  border-right: 0;
+}
+main.account_info div.tab-content div#profile div.form-group {
+  border: 1px solid #eaa2a2;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+main.account_info div.tab-content div#profile div.form-group:hover {
+  background: rgb(255,237,151);
+}
+main.account_info div.tab-content div#profile div.form-group>div {
+  display: flex;
+  align-items: center;
+}
+main.account_info div.tab-content div#profile div.form-group div.myInfoCredits,
+main.account_info div.tab-content div#profile div.form-group>label {
+  border-right: 1px solid #eaa2a2;
+}
+main.account_info div.tab-content div#profile div.form-group>label {
+  background: #fdd8dc;
+}
+main.account_info div.tab-content div#profile div.form-group>table {
+  margin: 0;
+}
+main.account_info div.tab-content div#profile div.form-group>div.col-sm-10 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+main.account_info div.tab-content div#gameCategory_lotto table:nth-child(1) {
+  text-align: center;
+}
+main.account_info div.tab-content div#gameCategory_lotto table:nth-child(1) thead th:nth-child(1) {
+  width: calc(100% / 3);
+}
+main.account_info div.tab-content div#gameCategory_lotto table:nth-child(2) thead tr:first-child {
+  background-color: unset !important;
+}
+main.account_info div.tab-content div#gameCategory_lotto table:nth-child(2) thead td {
+  border: unset;
+  font-weight: bold;
+}
+/*帳號管理 - 編輯*/
+#gameCategory_lotto table:nth-child(1) {
+  text-align: center;
+}
+#gameCategory_lotto table:nth-child(1) thead th:nth-child(1) {
+  width: calc(100% / 3);
+}
+#gameCategory_lotto table.lotto-config-table thead.tHead tr:first-child {
+  background-color: unset !important;
+}
+#gameCategory_lotto table.lotto-config-table thead.tHead tr:first-child th {
+  border: unset;
+  font-weight: bold;
+  background-color: unset !important;
+}
+#gameCategory_lotto table:nth-child(1) tbody tr td:nth-child(1),
+#gameCategory_lotto table:nth-child(2) tbody tr td:nth-child(1) {
+  background-color: #fdd8dc;
+  font-weight: 700;
+}
+#gameCategory_lotto table:nth-child(1) tbody tr td div[class*="input-group"] {
+  margin: 0 auto;
+}
+/* 個人管理 - 我的吃額 */
+#gameCategory_lotto table.myPayoutTb thead th:nth-child(1) {
+  width: 250px;
+}
+#gameCategory_lotto table.myPayoutTb thead tr:first-child {
+  background-color: unset !important;
+  border-right: none;
+  border-left: none;
+}
+#gameCategory_lotto table.myPayoutTb thead tr:first-child td {
+  border-right: none;
+  border-left: none;
+}
 
+/* 報表查詢 */
+main.papersMain div.border {
+  border-top: none !important;
+}
+main.papersMain div.border table.border {
+  border-right: none !important;
+  border-left: none !important;
+}
+table.papersTb tbody th {
+  width: 250px;
+}
+table.papersTb button[type="button"] {
+  min-width: 65px;
+  background: #f2f2f2;
+  color: #555;
+  border: 1px solid transparent;
+}
+table.papersTb button[type="button"]:hover {
+  border: 1px solid #510000;
+}
+table.papersTb button[type="button"]:focus {
+  background: #a90000;
+  border: 1px solid #510000;
+  color: #fff;
+}
+/* 開獎 */
+/* 開獎 - 開獎設置 */
+main.lotteryEditMain form table tbody th {
+  width: 160px;
+}
+main.lotteryEditMain form table tbody td {
+  text-align: center;
+}
+main.lotteryEditMain form input {
+  min-width: 55px;
+}
+main.lotteryEditMain form table tbody td input:last-child {
+  margin-right: 0 !important;
+}
+/* 開獎 - 歷史開獎 */
+form#historyForm div.border {
+  border-top: none !important;
+}
+form#historyForm div.border table.border {
+  border-right: none !important;
+  border-left: none !important;
+}
+form#historyForm table div.querybar div.col-6 {
+  padding-right: 0;
+}
+/*遊戲管理*/
+/*遊戲管理 - 彩種設置*/
+main.gameSettingListTb table tr td {
+  font-weight: 700;
+}
+main.gameSettingListTb table tr td i{
+  margin-right: unset;
+}
+form#gameSettingForm #gameSettingList.gameSettingList tbody tr:nth-child(1) {
+  background-color: #fdd8dc;
+  font-weight: 700;
+}
+form#gameSettingForm table#gameSettingList tbody tr td,
+form#gameSettingForm table#menuSettingList tbody tr td:nth-child(2) {
+  text-align: center;
+}
+form#gameSettingForm table#gameSettingList tbody tr td input,
+form#gameSettingForm table#gameSettingList tbody tr td select {
+  width: 160px;
+}
+form#gameSettingForm table#menuSettingList tbody tr td div label {
+  min-width: 120px;
+  display: inline-flex;
+  align-items: center;
+}
+form#gameSettingForm table#menuSettingList tbody tr td div label span {
+  margin-left: 5px;
+}
+form#gameSettingForm table#menuSettingList tbody tr td:nth-child(3),
+form#gameSettingForm table#menuSettingList tbody tr td:nth-child(3) input {
+  width: 80px;
+}
+form#gameSettingForm #menuSettingList.menuSettingList tbody tr th,
+form#gameSettingForm #gameSettingList.gameSettingList tbody tr th {
+  width: 15%; 
+}
+form#gameSettingForm #menuSettingList.menuSettingList tbody tr td:nth-child(2) {
+  width: 35px;
+}
+/*遊戲管理 - 退水限額*/
+#backLimitForm tbody tr {
+  text-align: center;
+}
+#backLimitForm tbody tr[id="Tr1"] th,
+#backLimitForm tbody tr[id="Tr1"] td,
+#backLimitList tbody tr[class="fastEditType1"] td,
+#backLimitList tbody tr[class="fastEditType1"] th {
+  background: #e7ffff;
+}
+#backLimitForm tbody tr[id="Tr2"] th,
+#backLimitForm tbody tr[id="Tr2"] td,
+#backLimitList tbody tr[class="fastEditType2"] td,
+#backLimitList tbody tr[class="fastEditType2"] th {
+  background: #e8e8ff;
+}
+#backLimitForm tbody tr[id="Tr3"] th,
+#backLimitForm tbody tr[id="Tr3"] td,
+#backLimitList tbody tr[class="fastEditType3"] td,
+#backLimitList tbody tr[class="fastEditType3"] th {
+  background: floralwhite;
+}
+#backLimitForm tbody tr[id="Tr4"] th,
+#backLimitForm tbody tr[id="Tr4"] td,
+#backLimitList tbody tr[class="fastEditType4"] td,
+#backLimitList tbody tr[class="fastEditType4"] th {
+  background: honeydew;
+}
+/*遊戲管理 - 注單管理*/
+div.betManageTb table tbody th{
+  width: 20%;
+}
+/*遊戲管理 - 注單明細下載*/
+table.betBackUpTb tbody th{
+  width: 20%;
+}
+table.betBackUpTb tbody td div.col-md-3{
+  padding-left: 0;
+}
+
+/* 系統設置 */
+/* 系統設置 - 全域設定 */
+div#golbalSettingTabContent ul li {
+  list-style: none;
+}
+div#golbalSettingTabContent div.tab-pane table th {
+  width: 20%;
+}
+div.cnyDate-daterange div[class*="input-group-sm"] {
+  position: relative;
+}
+div.cnyDate-daterange div[class*="input-group-sm"] input{
+  cursor: pointer;
+}
+div.cnyDate-daterange div[class*="input-group-sm"] i {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+}
+div[aria-labelledby="ipList-tab"] div.bootstrap-tagsinput{
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  line-height: 1.8;
+}
+/* 系統設置 - 系統紀錄查詢 */
+div.typeOfTransactionTb {
+  padding-right: 0;
+}
+/* 系統設置 - 權限總表 */
+main.userPermissionMain table th,
+main.userPermissionMain table td {
+  padding: unset;
+  text-align: center;
+}
+main.userPermissionMain table thead th:first-child,
+main.userPermissionMain table tbody th {
+  text-align: right;
+  padding-right: 5px;
+  width: 250px;
+}
+
+
+/* 外部參考 */
+div#navigationArea>div.webRefer {
+  width: 150px;
+  background: linear-gradient(#EB3A42 0%,#ff949e 100%);
+  border: none !important;
+  box-shadow: 1px 1px 3px #860e19;
+  cursor: pointer;
+}
+div#navigationArea>div.webRefer>p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: #fff;
+}
+div#navigationArea>div.webRefer>img {
+  width: 75px;
+  height: 75px;
+  margin-bottom: 0 !important;
+}
+div#navigationArea>div.webRefer:hover {
+  box-shadow: inset -2px -2px 6px #860e19, inset 2px 2px 6px #860e19;
+}
+
+/* 报表表格樣式 */
+table.papers .bg-member{ background-color: #9bc3e4;}
+table.papers .bg-downline{ background-color: #f3af8a;}
+table.papers .bg-myself{ background-color: #ffd674;}
+table.papers .bg-upline{ background-color: #c8deb7;}
+table.papers .bg-footer{ background: lightgoldenrodyellow;}
+/* 共用樣式 */
+.color_red{ color: red;}
+.color_skin{ color: #ff880e;}
+.color_blue{ color:#759aaf;}
+.color_green{ color: #28a745;}
+.font_bold{ font-weight: bold;}
 /* (#35403)不層層級、使用不同色 */
 /* 0:公司,1:WhiteLabel,2:Agent,3:會員 */
 .class_color_0{ color: rgb(255, 214, 214);}
@@ -1671,12 +1168,6 @@ table.agentTb>thead>tr>th.creditLeftTh>div>span:nth-child(2)>label {
 .class_bg_3{ background-color:#dbefff;}
 
 /* 個人管理 - 傳票管理 */
-form#voucherManageForm div.toolbar {
-  display: inline-flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: flex-end;
-}
 form#voucherManageForm div.toolbar table#requestTable tbody td:nth-child(2),
 form#voucherManageForm div.toolbar table#requestTable tbody td:nth-child(3) {
   position: relative;
@@ -1688,49 +1179,18 @@ form#voucherManageForm div.toolbar table#requestTable tbody td:nth-child(3) inpu
 form#voucherManageForm div.toolbar table#requestTable tbody td i {
   position: absolute;
   top: 8px;
-  right: 10px;
+  right: 5px;
 }
-div#pageArea {
-  width: 100%;
-  margin-right: 15px;
-}
-form#voucherManageForm nav.nav ul,
-div.phpLogOpPage nav.nav ul,
-form#ip-black-list nav.nav ul,
-div#pageArea nav.nav ul {
-  list-style: none;
-  position: unset;
-}
-form#voucherManageForm nav.nav ul li a,
-div.phpLogOpPage nav.nav ul li a,
-form#ip-black-list nav.nav ul li a,
-div#pageArea nav.nav ul li a {
-  height: 1.5rem;
-  min-width: 3.5rem;
-  padding: unset;
-  line-height: 1.4;
-  text-align: center;
-  color: #c82333;
-  border-color: #bd2130;
-}
-form#voucherManageForm nav.nav ul li.page-item.active a,
-div.phpLogOpPage nav.nav ul li a.text-white,
-form#ip-black-list nav.nav ul li.page-item.active a,
-div#pageArea nav.nav ul li a.text-white {
-  background: #c82333 !important;
-  color: #fff;
-}
-div.ipBlackMain form#ip-add table tbody tr td label,
-div.ipBlackMain form#ip-autoblock-config table tbody tr td label {
-  margin-bottom: unset;
-  display: inline-flex;
-}
-div.ipBlackMain form#ip-add table tbody tr td label span,
-div.ipBlackMain form#ip-autoblock-config table tbody tr td label span,
-div.ipBlackMain form#ip-autoblock-config table tbody tr td label i {
-  display: flex;
-  align-items: center;
-}
-div.ipBlackMain form#ip-autoblock-config table tbody tr td label span {
-  width: 175px;
+
+@media screen and (max-width: 1080px) {
+  #recent .contentL #kindTabContent div.onlineBetRateTd {
+    display: flex;
+    flex-direction: column;
+  }
+  #recent .contentL #kindTabContent div button.singleRatePlusMulti,
+  #recent .contentL #kindTabContent div button.singleRateMinusMulti,
+  #recent .contentL #kindTabContent div button.singleRatePlus,
+  #recent .contentL #kindTabContent div button.singleRateMinus {
+    width: 100%;
+  }
 }
