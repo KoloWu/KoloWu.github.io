@@ -1153,6 +1153,53 @@ div#navigationArea>div.webRefer:hover {
   box-shadow: inset -2px -2px 6px #860e19, inset 2px 2px 6px #860e19;
 }
 
+/* 注單列表彈跳 Dialog */
+.ui-dialog .ui-dialog-titlebar-close:before {
+  content: "X";
+  line-height: 1;
+  display: block;
+  color: #000000;
+}
+#betListDialog>table>tbody>tr a {
+  color: #007bff;
+}
+#betListDialog>table>tbody>tr:last-child {
+  background-color: #fdd8dc;
+  font-weight: 700;
+}
+#betListDialog>nav,
+#rateRecordDialog>nav {
+  display: block;
+  height: 55px;
+}
+#betListDialog>nav>ul,
+#rateRecordDialog>nav>ul {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 17px;
+}
+
+/*遊戲規則*/
+#twrap .list_type {
+  width: 17px;
+  height: 17px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  font-size: .75rem;
+  border-radius: 50%;
+  color: #fff;
+  background: #c71316;
+}
+#twrap .tb-bd tr:nth-child(odd) td {
+  padding: 15px 0;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
 /* 报表表格樣式 */
 table.papers .bg-member{ background-color: #9bc3e4;}
 table.papers .bg-downline{ background-color: #f3af8a;}
