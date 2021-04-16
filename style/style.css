@@ -208,37 +208,45 @@ nav.pagebar a.btn {
   margin-left: 5px;
 }
 #recent .contentL #kindTabContent nav.nav,
-div#rateRecordDialog nav {
+div#rateRecordDialog nav,
+div#betListDialog nav {
   position: relative;
   height: 20px;
 }
 #recent .contentL #kindTabContent .pagination,
-div#rateRecordDialog .pagination {
+div#rateRecordDialog .pagination,
+div#betListDialog .pagination {
   position: absolute;
   bottom: unset;
   right: 0px;
 }
 #recent .contentL #kindTabContent .pagination li.active a,
-div#rateRecordDialog .pagination li.active a {
+div#rateRecordDialog .pagination li.active a,
+div#betListDialog .pagination li.active a {
   color: #fff;
 }
 #recent .contentL #kindTabContent .pagination li.disabled,
-div#rateRecordDialog .pagination li.disabled {
+div#rateRecordDialog .pagination li.disabled,
+div#betListDialog .pagination li.disabled {
   display: none;
 }
 #recent .contentL #kindTabContent .pagination li,
-div#rateRecordDialog .pagination li {
+div#rateRecordDialog .pagination li,
+div#betListDialog .pagination li {
   display: inline-block;
 }
 
 #recent .contentL #kindTabContent .pagination li a,
-div#rateRecordDialog .pagination li a {
+div#rateRecordDialog .pagination li a,
+div#betListDialog .pagination li a {
   font-size: 11px;
 }
 #recent .contentL #kindTabContent .pagination>li:first-child>a,
 #recent .contentL #kindTabContent .pagination>li:first-child>span,
 div#rateRecordDialog .pagination>li:first-child>a,
-div#rateRecordDialog .pagination>li:first-child>span {
+div#rateRecordDialog .pagination>li:first-child>span,
+div#betListDialog .pagination>li:first-child>a,
+div#betListDialog .pagination>li:first-child>span {
   margin-left: 0;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
@@ -246,26 +254,33 @@ div#rateRecordDialog .pagination>li:first-child>span {
 #recent .contentL #kindTabContent .pagination>li:last-child>a,
 #recent .contentL #kindTabContent .pagination>li:last-child>span,
 div#rateRecordDialog .pagination>li:last-child>a,
-div#rateRecordDialog .pagination>li:last-child>span {
+div#rateRecordDialog .pagination>li:last-child>span,
+div#betListDialog .pagination>li:last-child>a,
+div#betListDialog .pagination>li:last-child>span {
   border-radius: 0px 4px 4px 0px;
 }
 #recent .contentL #kindTabContent .pagination>li>a,
 #recent .contentL #kindTabContent .pagination>li>span,
 div#rateRecordDialog .pagination>li>a,
-div#rateRecordDialog .pagination>li>span {
+div#rateRecordDialog .pagination>li>span,
+div#betListDialog .pagination>li>a,
+div#betListDialog .pagination>li>span {
   padding: 1px 12px;
 }
 #recent .contentL #kindTabContent .pagination .jumpPage,
-div#rateRecordDialog .pagination .jumpPage {
+div#rateRecordDialog .pagination .jumpPage,
+div#betListDialog .pagination .jumpPage {
   display: inline-block;
   margin-left: 5px;
 }
 #recent .contentL #kindTabContent .pagination>li>a,
-div#rateRecordDialog .pagination>li>a {
+div#rateRecordDialog .pagination>li>a,
+div#betListDialog .pagination>li>a {
   border-right: 0;
 }
 #recent .contentL #kindTabContent .pagination>li:last-child>a,
-div#rateRecordDialog .pagination>li:last-child>a {
+div#rateRecordDialog .pagination>li:last-child>a,
+div#betListDialog .pagination>li:last-child>a {
   border-right: 1px solid #bd2130;
 }
 div#pageArea {
