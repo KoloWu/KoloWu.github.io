@@ -304,6 +304,13 @@ div#rateRecordDialog nav ul li.active a {
   background: #c82333 !important;
   color: #fff;
 }
+div#rateRecordDialog nav {
+  height: 25px;
+}
+div#rateRecordDialog .pagination {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
 /* 項目球樣式 */
 #recent .contentL #kindTabContent div table td.fastChoseTd.item span.number,
 #recent .contentL #kindTabContent div table span.openNum span.number,
